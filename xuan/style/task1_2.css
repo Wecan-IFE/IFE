@@ -1,0 +1,225 @@
+/*总体样式*/
+body, header, div, aside, footer, nav, p, h1, h2, h3, ul, ol, form, address, figure, figcaption, table {
+    margin: 0;
+}
+
+body {
+    font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu, cursive;
+    font-size: 0.85em;
+    font-weight: 500;
+}
+
+/*头部*/
+header {
+    height: 50px;
+    padding: 5px 10px;
+    line-height: 50px;
+    background-color: #222222;
+}
+
+header h1 {
+    display: inline-block;
+    margin: 0 20px;
+    color: #fff;
+    font-weight: 900;
+}
+
+nav {
+    display: inline-block;
+    float: right;
+}
+
+ul {
+    list-style: none;
+}
+
+nav ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    float: left;
+    padding: 0 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav a:hover {
+    color: #a9a9a9;
+}
+
+/*内容体*/
+/*第一、二个内容块*/
+#container {
+    padding: 15px;
+    background-color: #e2e2e2;
+}
+
+article, section, aside {
+    /*内部元素的margin会影响外部元素*/
+    margin: 0 0 15px;
+    padding: 30px 20px;
+    border-style: outset;
+    /*外部元素的backgroundColor会继承过来*/
+    background-color: #fff;
+}
+
+h3 {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #474747;
+}
+
+address {
+    font-style: normal;
+    font-size: small;
+    margin: 12px 0;
+}
+
+p {
+    line-height: 2em;
+}
+
+address + p, img + p {
+    text-indent: 2em;
+}
+
+article > img {
+    margin: 10px 0;
+    width: 300px;
+    height: 240px;
+}
+
+article ul {
+    padding: 0 15px;
+}
+
+/*第三个内容块*/
+figure {
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #bbb;
+    text-align: center;
+}
+
+figure img {
+    max-height: 250px;
+    max-width: 300px;
+}
+
+/*第四个内容块*/
+ol {
+    font-weight: bolder;
+    margin: 16px 0;
+}
+
+table {
+    width: 100%;
+    font-size: 10px;
+    border-collapse: collapse;
+    text-align: left;
+    font-weight: 400;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+tr {
+    height: 20px;
+    line-height: 20px;
+}
+
+thead {
+    background-color: #222222;
+    color: #fff;
+    font-weight: 900;
+}
+
+tfoot {
+    background-color: #dddddd;
+    font-weight: 900;
+}
+
+/*第五个内容块*/
+aside {
+    margin-right: 15px;
+    padding: 20px;
+}
+
+aside h3:before {
+    content: " ";
+    border: 2px solid #ccc;
+    border-top-width: 8px;
+    border-bottom-width: 8px;
+    margin-right: 20px;
+}
+
+form {
+    margin-top: 20px;
+    position: relative;
+    font-size: 12px;
+}
+
+label:first-child {
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 15px 0 220px;
+}
+
+mark {
+    display: block;
+    height: 20px;
+    padding-left: 360px;
+    background-color: #fff;
+    color: #838383;
+    margin-bottom: 10px;
+}
+
+input[type="email"], input[type="password"] {
+    width: 130px;
+    height: 16px;
+    font-size: 12px;
+}
+
+select {
+    width: 50px;
+    height: 18px;
+    font-size: 12px;
+}
+
+textarea {
+    vertical-align: top;
+    width: 65%;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    height: 35px;
+    background-color: #4c6aff;
+    color: #fff;
+    font-weight: 900;
+    border: 1px solid #999;
+    border-radius: 10px;
+}
+
+/*页脚*/
+footer {
+    height: 50px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    font-size: 10px;
+    padding-top: 20px;
+}
