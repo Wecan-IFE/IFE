@@ -14,7 +14,7 @@ body {
 table th {
   text-align: left;
 }
-table thead tr:first-child {
+table thead tr{
   background: #000;
   color: #fff;
 }
