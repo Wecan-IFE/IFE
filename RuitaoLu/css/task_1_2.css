@@ -16,24 +16,15 @@ header{
 	background: rgba(0, 0, 0, .6);
 }
 header h1{
-<<<<<<< HEAD
-=======
 	display: inline-block;
->>>>>>> develop
 	margin-left: 20px;
 	font-size: 30px;
 	line-height: 50px;
 	color: #fff;
 }
 header ul{
-<<<<<<< HEAD
-	position: absolute;
-	right: 0;
-	top: 17px;
-=======
 	float: right;
 	line-height: 50px;
->>>>>>> develop
 }
 header li{
 	float: left;
@@ -48,32 +39,21 @@ header li a{
 header li:nth-child(4) a{
 	color: #999;
 }
-<<<<<<< HEAD
-article,.image{
-=======
 article,aside,.image{
->>>>>>> develop
 	max-width: 1180px;
 	margin: 20px auto;
 	padding: 30px 20px;
 	background: #fff;
 	box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .3);
-<<<<<<< HEAD
-=======
 	/* border-style: outset; */
->>>>>>> develop
 }
 article h4{
 	margin: 15px 0;
 	color: #999;
 }
-<<<<<<< HEAD
-article span{
-=======
 time,address{
 	display: inline-block;
 	font-style: normal;
->>>>>>> develop
 	font-size: 14px;
 	color: #999;
 }
@@ -99,24 +79,14 @@ article ol{
 article table{
 	width: 100%;
 	border-collapse: collapse;
-<<<<<<< HEAD
-	border: solid #999;
-	border-width: 1px 0 0 1px;
-=======
->>>>>>> develop
 }
 article th,td{
 	padding: 5px;
 	font-size: 14px;
 	text-align: left;
-<<<<<<< HEAD
-	border: solid #999;
-	border-width: 0 1px 1px 0;
-=======
 }
 table, th, td {
     border: 1px solid #ccc;
->>>>>>> develop
 }
 .table-head{
 	color: #fff;
@@ -125,30 +95,20 @@ table, th, td {
 .table-footer{
 	background: #eee;
 }
-<<<<<<< HEAD
-.image div{
-=======
 .image figure{
->>>>>>> develop
 	margin: 10px 0 0 3em;
 	padding: 10px 10px 20px;
 	width: 100px;
 	height: 100px;
 	border: 1px solid #eee;
 }
-<<<<<<< HEAD
-.image p{
-=======
 .image figcaption{
->>>>>>> develop
 	padding-bottom: 10px;
 	text-align: center;
 	font-size: 12px;
 }
 .image img{
 	width: 100%;
-<<<<<<< HEAD
-=======
 }
 aside h2{
 	height: 40px;
@@ -199,5 +159,4 @@ footer{
 	text-align: center;
 	background: #000;
 	color: #fff;
->>>>>>> develop
 }
