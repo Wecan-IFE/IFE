@@ -1,0 +1,343 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #999;
+}
+@mixin font($family,$weight,$size,$color,$line-height:16px){
+	font-family: $family;
+	font-weight: $weight;
+	font-size: $size;
+	color: $color;
+	line-height: $line-height;
+}
+@mixin pos($position,$z-index: 0){
+	position: $position;
+	z-index: $z-index;
+}
+@mixin size($width,$height){
+	width: $width;
+	height: $height;
+}
+.warp{
+	margin: 100px auto;
+	padding: 0 44px;
+	max-width: 892px;
+	min-height: 1386px;
+	background: #fff;
+}
+.header{
+	@include pos(relative);
+	.header-title{
+		@include pos(relative);
+		@include font(simHei,400,12px,#fff);
+		display: inline-block;
+		vertical-align: bottom;
+		width: 110px;
+		height: 61px;
+		background: #d45d5c;
+		span{
+			@include pos(absolute);
+			left: 5px;
+			bottom: 5px;
+		}
+	}
+	.header-time{
+		@include font(simHei,400,12px,#d45d5c);	
+		@include pos(absolute);
+		right: 0;
+		bottom: 0;
+	}
+}
+$main-border: solid #938e8c;
+.main{
+	padding: 30px 0;
+	border-top: 2px $main-border;
+	border-bottom: 1px $main-border;
+}
+.banner{
+	margin-bottom: 30px;
+	&:after{
+		content: "";
+		height: 0;
+		display: block;
+		visibility: none;
+		clear: both;
+	}
+	.banner-left{
+		@include pos(relative);
+		@include size(641px,301px);
+		float: left;
+		font-size: 0;
+		img{
+			width: 641px;
+			height: 301px;
+		}
+		.banner-mask-green,.banner-mask-red{
+			@include size(191px,301px);	
+		}
+		.banner-mask-green{
+			@include pos(absolute,1);
+			top: 0;
+			left: 0;		
+			background: rgba(66, 141, 89, .5);
+		}
+		.banner-mask-red{
+			@include pos(absolute,1);
+			top: 0;
+			right: 0;
+			background: rgba(204, 118, 128, .5);
+		}
+	}
+	.banner-right{
+		@include size(203px,301px);
+		@include pos(relative);
+		float: right;
+		border-top: 2px solid #cc8091;
+		h4{
+			@include font("Microsoft YaHei",400,24px,#000,40px);
+			font-variant:small-caps;
+			text-decoration: underline;
+		}
+		p{
+			@include font(KaiTi,400,12px,#676767,10px);
+			margin-bottom: 50px;
+		}
+		>span{
+			@include font("Microsoft YaHei",400,116px,#75b86b,40px);
+			text-decoration: underline;
+			font-style: oblique;
+		}
+		.banner-right-bottom{
+			@include font("Microsoft YaHei",400,12px,#cc8091);
+			@include pos(absolute);
+			bottom: 0;
+			.banner-huge{
+				font-size: 55px;
+			}
+			.banner-mid{
+				@include pos(absolute);
+				bottom: 12px;
+				font-size: 21px;
+			}
+			.banner-bottom{
+				font-size: 12px;
+			}
+		}
+	}
+}
+.center{
+	@include size(100%,174px);
+	margin-bottom: 40px;
+	overflow: hidden;
+	div{
+		float: left;
+		h4{
+			@include font("Microsoft YaHei",600,16px,#418c59);
+			margin-bottom: 10px;
+			text-decoration: underline;
+		}
+		p{
+			@include font("Microsoft YaHei",400,12px,#000);
+			line-height: 16px;
+			opacity: .7;
+		}
+	}
+	.what{
+		width: 228px;
+	}
+	.when{
+		margin: 0 30px;
+		width: 207px;
+		h4{
+			color: #d2994f;	
+		}		
+	}
+	.how{
+		@include pos(relative);
+		width: 140px;
+		min-height: 174px;
+		h4{
+			color: #cc7680;
+		}
+		.how-percent{
+			@include pos(absolute);
+			left: 0;
+			bottom: 0;
+			span{
+				@include font("Microsoft YaHei",400,12px,#000);
+				display: block;
+				line-height: 16px;
+				opacity: .7;
+				i{
+					color: #cd4a48;
+				}
+			}
+		}
+	}
+}
+.bottom{
+	&:after{
+		content: "";
+		height: 0;
+		display: block;
+		visibility: none;
+		clear: both;
+	}
+	.bottom-left{
+		@include size(415px,auto);
+		float: left;
+		img{
+			float: right;
+			margin: 10px 10px 0 10px;
+			width: 166px;
+			height: 286px;
+		}
+		.bottom-left-header{
+			margin-bottom: 30px;
+			padding-bottom: 10px;
+			border-bottom: 2px solid #11456b;
+			i{
+				font-size: 72px;
+				font-style: oblique;
+				color: #f5e327;
+			}
+			span{
+				@include font("simHei",600,42px,#11456b);		
+			}
+			h2{
+				@include font("simHei",600,33px,#11456b);
+				margin: 15px 0 10px;
+			}
+		}
+		p{
+			@include font("simSun",400,12px,#767777);
+			text-indent: 2em;
+		}
+		.first-para{
+			text-indent: 0;
+			&:first-letter{
+				@include font("Microsoft YaHei",400,70px,#f5e327,70px);
+				float: left;
+			}
+		}
+	}
+	.bottom-right{
+		width: 458px;
+		float: right;
+		.bottom-right-banner{
+			@include pos(relative);
+			width: 100%;
+			font-size: 0;
+			img{
+				@include size(458px,275px);		
+			}
+			.bottom-mask{
+				@include pos(absolute,1);
+				bottom: 0;
+				width: 100%;
+				height: 61px;
+				background: rgba(0, 0, 0, .4);
+				span{
+					@include font("Microsoft YaHei",400,26px,#fff,44px);
+					display: block;
+					margin: 7px 0 0 30px;
+					padding-left: 10px;
+					height: 44px;
+					border-left: 3px solid #72b16a;
+					i{
+						@include font("Microsoft YaHei",400,12px,#72b16a,1.4);
+					}
+				}
+			}
+		}
+		.bottom-right-menu{
+			@include pos(relative);
+			@include size(419px,278px);
+			margin-top: 30px;
+			padding: 20px;
+			background: #eeedd6;
+			ul{
+				li{
+					@include font("simSun",400,16px,#5a5b5b);
+					padding-bottom: 20px;
+					text-align: left;
+					list-style: none;
+					span{
+						float: right;
+						font-size: 12px;
+						font-style: italic;
+						text-align: right;
+					}
+				}
+			}
+			.menu-banner{
+				@include pos(absolute);
+				@include size(260px,160px);
+				left: 0;
+				bottom: 0;
+				background: #d45d5c;
+				.menu-banner-zero{
+					margin-left: 10px;
+					font-family: "Microsoft YaHei";
+					font-size: 110px;
+					line-height: 160px;
+					color: #fff;
+				}
+				.menu-banner-right{
+					@include pos(absolute);
+					margin-top: -43px;
+					padding-left: 10px;
+					width: 189px;
+					height: 86px;
+					top: 50%;
+					left: 80px;
+					border-left: 2px solid #fff;
+					i{
+						@include font("simHei",400,21px,#fff,26px);
+						display: block;
+						font-style: oblique;
+					}
+					p{
+						@include font("simHei",400,12px,#fff,12px);
+						padding-bottom: 6px;
+					}
+				}
+			}
+			.menu-quote{
+				@include pos(absolute);
+				@include size(199px,160px);
+				right: 0;
+				bottom: 0;
+				.menu-quote-start,.menu-quote-end{
+					height: 26px;
+					font-family: "simHei";
+					font-size: 72px;
+					color: #d45d5c;		
+				}
+				.menu-quote-start{
+					float: left;	
+					margin-left: -20px;
+					margin-right: 10px;
+				}
+				.menu-quote-end{
+					float: right;
+					margin-right: -20px;
+					margin-top: -38px;
+				}
+				p{
+					@include font("simHei",400,14px,#5a5b5b);
+					margin: 18px;
+					font-style: italic;
+				}
+			}
+		}
+	}
+}
+.footer{
+	span{
+		@include font("simHei",400,12px,#d45d5c);
+		float: right;
+	}
+}
