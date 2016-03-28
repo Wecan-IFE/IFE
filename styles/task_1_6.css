@@ -1,0 +1,497 @@
+/* XD-Wecan  卢睿韬*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #999;
+}
+
+.warp {
+	margin: 100px auto;
+	padding: 0 44px;
+	max-width: 892px;
+	min-height: 1386px;
+	background: #fff;
+}
+
+.header {
+	position: relative;
+	z-index: 0;
+}
+
+.header .header-title {
+	position: relative;
+	z-index: 0;
+	font-family: simHei;
+	font-weight: 400;
+	font-size: 12px;
+	color: #fff;
+	line-height: 16px;
+	display: inline-block;
+	vertical-align: bottom;
+	width: 110px;
+	height: 61px;
+	background: #d45d5c;
+}
+
+.header .header-title span {
+	position: absolute;
+	z-index: 0;
+	left: 5px;
+	bottom: 5px;
+}
+
+.header .header-time {
+	font-family: simHei;
+	font-weight: 400;
+	font-size: 12px;
+	color: #d45d5c;
+	line-height: 16px;
+	position: absolute;
+	z-index: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.main {
+	padding: 30px 0;
+	border-top: 2px solid #938e8c;
+	border-bottom: 1px solid #938e8c;
+}
+
+.banner {
+	margin-bottom: 30px;
+}
+
+.banner:after {
+	content: "";
+	height: 0;
+	display: block;
+	visibility: none;
+	clear: both;
+}
+
+.banner .banner-left {
+	position: relative;
+	z-index: 0;
+	width: 641px;
+	height: 301px;
+	float: left;
+	font-size: 0;
+}
+
+.banner .banner-left img {
+	width: 641px;
+	height: 301px;
+}
+
+.banner .banner-left .banner-mask-green,
+.banner .banner-left .banner-mask-red {
+	width: 191px;
+	height: 301px;
+}
+
+.banner .banner-left .banner-mask-green {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background: rgba(66, 141, 89, 0.5);
+}
+
+.banner .banner-left .banner-mask-red {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	background: rgba(204, 118, 128, 0.5);
+}
+
+.banner .banner-right {
+	width: 203px;
+	height: 301px;
+	position: relative;
+	z-index: 0;
+	float: right;
+	border-top: 2px solid #cc8091;
+}
+
+.banner .banner-right h4 {
+	font-family: "Microsoft YaHei";
+	font-weight: 400;
+	font-size: 24px;
+	color: #000;
+	line-height: 40px;
+	font-variant: small-caps;
+	text-decoration: underline;
+}
+
+.banner .banner-right p {
+	font-family: KaiTi;
+	font-weight: 400;
+	font-size: 12px;
+	color: #676767;
+	line-height: 10px;
+	margin-bottom: 50px;
+}
+
+.banner .banner-right > span {
+	font-family: "Microsoft YaHei";
+	font-weight: 400;
+	font-size: 116px;
+	color: #75b86b;
+	line-height: 40px;
+	text-decoration: underline;
+	font-style: oblique;
+}
+
+.banner .banner-right .banner-right-bottom {
+	font-family: "Microsoft YaHei";
+	font-weight: 400;
+	font-size: 12px;
+	color: #cc8091;
+	line-height: 16px;
+	position: absolute;
+	z-index: 0;
+	bottom: 0;
+}
+
+.banner .banner-right .banner-right-bottom .banner-huge {
+	font-size: 55px;
+}
+
+.banner .banner-right .banner-right-bottom .banner-mid {
+	position: absolute;
+	z-index: 0;
+	bottom: 12px;
+	font-size: 21px;
+}
+
+.banner .banner-right .banner-right-bottom .banner-bottom {
+	font-size: 12px;
+}
+
+.center {
+	width: 100%;
+	height: 174px;
+	margin-bottom: 40px;
+	overflow: hidden;
+}
+
+.center div {
+	float: left;
+}
+
+.center div h4 {
+	font-family: "Microsoft YaHei";
+	font-weight: 600;
+	font-size: 16px;
+	color: #418c59;
+	line-height: 16px;
+	margin-bottom: 10px;
+	text-decoration: underline;
+}
+
+.center div p {
+	font-family: "Microsoft YaHei";
+	font-weight: 400;
+	font-size: 12px;
+	color: #000;
+	line-height: 16px;
+	line-height: 16px;
+	opacity: .7;
+}
+
+.center .what {
+	width: 228px;
+}
+
+.center .when {
+	margin: 0 30px;
+	width: 207px;
+}
+
+.center .when h4 {
+	color: #d2994f;
+}
+
+.center .how {
+	position: relative;
+	z-index: 0;
+	width: 140px;
+	min-height: 174px;
+}
+
+.center .how h4 {
+	color: #cc7680;
+}
+
+.center .how .how-percent {
+	position: absolute;
+	z-index: 0;
+	left: 0;
+	bottom: 0;
+}
+
+.center .how .how-percent span {
+	font-family: "Microsoft YaHei";
+	font-weight: 400;
+	font-size: 12px;
+	color: #000;
+	line-height: 16px;
+	display: block;
+	line-height: 16px;
+	opacity: .7;
+}
+
+.center .how .how-percent span i {
+	color: #cd4a48;
+}
+
+.bottom:after {
+	content: "";
+	height: 0;
+	display: block;
+	visibility: none;
+	clear: both;
+}
+
+.bottom .bottom-left {
+	width: 415px;
+	height: auto;
+	float: left;
+}
+
+.bottom .bottom-left img {
+	float: right;
+	margin: 10px 10px 0 10px;
+	width: 166px;
+	height: 286px;
+}
+
+.bottom .bottom-left .bottom-left-header {
+	margin-bottom: 30px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #11456b;
+}
+
+.bottom .bottom-left .bottom-left-header i {
+	font-size: 72px;
+	font-style: oblique;
+	color: #f5e327;
+}
+
+.bottom .bottom-left .bottom-left-header span {
+	font-family: "simHei";
+	font-weight: 600;
+	font-size: 42px;
+	color: #11456b;
+	line-height: 16px;
+}
+
+.bottom .bottom-left .bottom-left-header h2 {
+	font-family: "simHei";
+	font-weight: 600;
+	font-size: 33px;
+	color: #11456b;
+	line-height: 16px;
+	margin: 15px 0 10px;
+}
+
+.bottom .bottom-left p {
+	font-family: "simSun";
+	font-weight: 400;
+	font-size: 12px;
+	color: #767777;
+	line-height: 16px;
+	text-indent: 2em;
+}
+
+.bottom .bottom-left .first-para {
+	text-indent: 0;
+}
+
+.bottom .bottom-left .first-para:first-letter {
+	font-family: "Microsoft YaHei";
+	font-weight: 400;
+	font-size: 70px;
+	color: #f5e327;
+	line-height: 70px;
+	float: left;
+}
+
+.bottom .bottom-right {
+	width: 458px;
+	float: right;
+}
+
+.bottom .bottom-right .bottom-right-banner {
+	position: relative;
+	z-index: 0;
+	width: 100%;
+	font-size: 0;
+}
+
+.bottom .bottom-right .bottom-right-banner img {
+	width: 458px;
+	height: 275px;
+}
+
+.bottom .bottom-right .bottom-right-banner .bottom-mask {
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	width: 100%;
+	height: 61px;
+	background: rgba(0, 0, 0, 0.4);
+}
+
+.bottom .bottom-right .bottom-right-banner .bottom-mask span {
+	font-family: "Microsoft YaHei";
+	font-weight: 400;
+	font-size: 26px;
+	color: #fff;
+	line-height: 44px;
+	display: block;
+	margin: 7px 0 0 30px;
+	padding-left: 10px;
+	height: 44px;
+	border-left: 3px solid #72b16a;
+}
+
+.bottom .bottom-right .bottom-right-banner .bottom-mask span i {
+	font-family: "Microsoft YaHei";
+	font-weight: 400;
+	font-size: 12px;
+	color: #72b16a;
+	line-height: 1.4;
+}
+
+.bottom .bottom-right .bottom-right-menu {
+	position: relative;
+	z-index: 0;
+	width: 419px;
+	height: 278px;
+	margin-top: 30px;
+	padding: 20px;
+	background: #eeedd6;
+}
+
+.bottom .bottom-right .bottom-right-menu ul li {
+	font-family: "simSun";
+	font-weight: 400;
+	font-size: 16px;
+	color: #5a5b5b;
+	line-height: 16px;
+	padding-bottom: 20px;
+	text-align: left;
+	list-style: none;
+}
+
+.bottom .bottom-right .bottom-right-menu ul li span {
+	float: right;
+	font-size: 12px;
+	font-style: italic;
+	text-align: right;
+}
+
+.bottom .bottom-right .bottom-right-menu .menu-banner {
+	position: absolute;
+	z-index: 0;
+	width: 260px;
+	height: 160px;
+	left: 0;
+	bottom: 0;
+	background: #d45d5c;
+}
+
+.bottom .bottom-right .bottom-right-menu .menu-banner .menu-banner-zero {
+	margin-left: 10px;
+	font-family: "Microsoft YaHei";
+	font-size: 110px;
+	line-height: 160px;
+	color: #fff;
+}
+
+.bottom .bottom-right .bottom-right-menu .menu-banner .menu-banner-right {
+	position: absolute;
+	z-index: 0;
+	margin-top: -43px;
+	padding-left: 10px;
+	width: 189px;
+	height: 86px;
+	top: 50%;
+	left: 80px;
+	border-left: 2px solid #fff;
+}
+
+.bottom .bottom-right .bottom-right-menu .menu-banner .menu-banner-right i {
+	font-family: "simHei";
+	font-weight: 400;
+	font-size: 21px;
+	color: #fff;
+	line-height: 26px;
+	display: block;
+	font-style: oblique;
+}
+
+.bottom .bottom-right .bottom-right-menu .menu-banner .menu-banner-right p {
+	font-family: "simHei";
+	font-weight: 400;
+	font-size: 12px;
+	color: #fff;
+	line-height: 12px;
+	padding-bottom: 6px;
+}
+
+.bottom .bottom-right .bottom-right-menu .menu-quote {
+	position: absolute;
+	z-index: 0;
+	width: 199px;
+	height: 160px;
+	right: 0;
+	bottom: 0;
+}
+
+.bottom .bottom-right .bottom-right-menu .menu-quote .menu-quote-start,
+.bottom .bottom-right .bottom-right-menu .menu-quote .menu-quote-end {
+	height: 26px;
+	font-family: "simHei";
+	font-size: 72px;
+	color: #d45d5c;
+}
+
+.bottom .bottom-right .bottom-right-menu .menu-quote .menu-quote-start {
+	float: left;
+	margin-left: -20px;
+	margin-right: 10px;
+}
+
+.bottom .bottom-right .bottom-right-menu .menu-quote .menu-quote-end {
+	float: right;
+	margin-right: -20px;
+	margin-top: -38px;
+}
+
+.bottom .bottom-right .bottom-right-menu .menu-quote p {
+	font-family: "simHei";
+	font-weight: 400;
+	font-size: 14px;
+	color: #5a5b5b;
+	line-height: 16px;
+	margin: 18px;
+	font-style: italic;
+}
+
+.footer span {
+	font-family: "simHei";
+	font-weight: 400;
+	font-size: 12px;
+	color: #d45d5c;
+	line-height: 16px;
+	float: right;
+}
+
+/*# sourceMappingURL=task_1_6.css.map */
