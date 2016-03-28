@@ -1,0 +1,88 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+.box{
+	width:400px;
+	height:200px;
+	background: #ccc;
+	position: relative;
+}
+/*方法一*/
+/*.box{
+	position:absolute;或fixed
+	top:50%;
+	left:50%;
+	margin-top:-100px;
+	margin-left:-200px;
+}*/
+/*方法二*/
+.box{
+	position: absolute;/*或fixed*/
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	margin: auto;
+}
+/*方法三(移动端)*/
+/*.box{
+	position: absolute;
+	transform: translate(50%,50%);
+	-webkit-transform:translate(50%,50%);
+	-moz-transform:translate(50%,50%);
+	-ms-transform:translate(50%,50%);
+}*/
+/*方法四*/
+/*body{
+	position: absolute;
+	padding-left:50%;
+	padding-top:10%;//此方法可配合js使用（获取浏览器宽度即可）
+}
+.box{
+	margin-left:-200px;
+}*/
+/*方法五--Flex布局*/
+/*.box{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	水平居中
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	-ms-flex-pack:center;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	justify-content: center;
+	 垂直居中 
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	-ms-flex-align:center;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	align-items: center;
+}*/
+/*
+说明：这里列出的全是块级元素的垂直居中水平居中
+行内元素：水平居中有text-align，垂直居中line-height；Flex布局；
+*/
+#circle1,#circle2{
+	width: 50px;
+	height: 50px;
+	background: #fc0;
+}
+#circle1{
+	border-radius: 0 0 50px 0;
+	-webkit-border-radius: 0 0 50px 0;
+}
+#circle2{
+	border-radius:50px 0 0 0;
+	-webkit-border-radius: 50px 0 0 0;
+	position: absolute;
+	top:150px;
+	left:350px;
+}
+
