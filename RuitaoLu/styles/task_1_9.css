@@ -275,11 +275,13 @@ header {
   .sidebar .navbar ul {
     padding-left: 40px; }
   .sidebar .navbar ul > li {
-    min-height: 50px;
-    line-height: 50px; }
+    min-height: 48px;
+    line-height: 48px; }
+  .sidebar .navbar ol > li {
+    min-height: 40px;
+    line-height: 40px; }
   .sidebar .navbar li {
     font-size: 14px;
-    line-height: 30px;
     color: #67778b; }
 
 /*# sourceMappingURL=task_1_9.css.map */

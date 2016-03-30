@@ -289,12 +289,15 @@ $sidebar-default: #67778b;
       padding-left: 40px;
     }
     ul>li{
-      min-height: 50px;
-      line-height: 50px;
+      min-height: 48px;
+      line-height: 48px;
+    }
+    ol>li{
+      min-height: 40px;
+      line-height: 40px; 
     }
     li{
       font-size: 14px;
-      line-height: 30px;
       color: $sidebar-default;
     }
     .navbar-form{
