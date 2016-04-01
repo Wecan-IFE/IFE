@@ -319,6 +319,15 @@ $sidebar-default: #67778b;
   }
 }
 /* main */
+$grey: #aaa;
+.blue-button{
+  width: 50px;
+  height: 30px;
+  border: 0;
+  border-radius: 2px;
+  color: #fff;
+  background: $blue;
+}
 .shadow{
   box-shadow: 0 0 1px rgba(0, 0, 0, .2);
 }
@@ -329,13 +338,14 @@ $sidebar-default: #67778b;
   width: 1280px-270px;
   max-height: 1266px;
   min-height: 100%;
+  font-size: 12px;
   background: #eeedec;
   .main-nav{
     padding: 10px 0 10px 30px;
-    font-size: 12px;
     background: #fff;
     span{
       margin-right: 5px;
+      color: $grey;
       &:hover{
         color: $blue;
       }
@@ -345,10 +355,71 @@ $sidebar-default: #67778b;
     }
   }
   .query{
-      margin: 20px auto 10px;
+      position: relative;
+      margin: 15px auto 15px;
+      padding: 20px 0 40px;
       width: 890px;
-      height: 85px;
+      height: 45px;
       background: #fff;
       @extend .shadow;
+      label{
+        margin-right: 15px;
+        color: #aaa;
+      }
+      select,input{
+        padding-left: 5px;
+        height: 30px;
+      }
+      .query-1,.query-2,.query-3{
+        float: left;
+      }
+      .query-1{
+        margin: 0 30px;
+      }
+      .query-2{
+        position: relative;
+        margin-right: 80px;
+        div:nth-child(1){
+          margin-bottom: 5px;
+        }
+        .query-change{
+          position: absolute;
+          top: 50%;
+          right: -30px;
+          margin-top: -18.5px;
+          width: 27px;
+          height: 37px;
+          text-align: right;
+          line-height: 37px;
+          color: #fff;
+          background: url(../images/task_1_9/change.png) 2px 0 no-repeat;
+        }
+      }
+      .query-3{
+        margin-right: 30px;
+        width: 330px;
+        input,select{
+          margin-right: 15px;
+          margin-bottom: 5px;
+        }
+        input[type=date]{
+          width: 115px;
+        }
+        #query-totalTime{
+          width: 70px;
+        }
+        #query-num{
+          width: 70px;
+        }
+        #query-bargin{
+          width: 125px;
+        }
+      }
+      button{
+        @extend .blue-button;
+        position: absolute;
+        top: 50%;
+        margin-top: -15px;
+      }
   }
 }
