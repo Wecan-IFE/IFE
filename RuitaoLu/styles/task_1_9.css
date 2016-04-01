@@ -305,13 +305,14 @@ header {
   color: #fff;
   background: #2189bf; }
 
-.shadow, .main .query {
+.shadow, .main .query, .main .history img, .main .history div {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.2); }
 
 .main {
   position: absolute;
   top: 0;
   left: 270px;
+  padding-bottom: 40px;
   width: 1010px;
   max-height: 1266px;
   min-height: 100%;
@@ -378,5 +379,50 @@ header {
       position: absolute;
       top: 50%;
       margin-top: -15px; }
+  .main .history {
+    margin: 0 auto;
+    width: 890px; }
+    .main .history img, .main .history div {
+      float: left;
+      margin-right: 5px; }
+    .main .history img {
+      padding: 23px 10px;
+      width: 12px;
+      height: 20px;
+      background: #fff; }
+    .main .history .history-tab {
+      width: 110px;
+      height: 66px;
+      background: #fff; }
+      .main .history .history-tab span {
+        display: block; }
+      .main .history .history-tab .history-time {
+        padding-top: 10px;
+        margin-bottom: 5px;
+        text-align: center;
+        color: #333;
+        border-top: 4px solid #fff; }
+      .main .history .history-tab .history-money {
+        font-size: 18px;
+        text-align: center;
+        color: #acacab; }
+        .main .history .history-tab .history-money b {
+          font-size: 21px;
+          color: #ec6500; }
+      .main .history .history-tab:hover .history-time {
+        border-top: 4px solid #2189bf; }
+    .main .history .history-query {
+      margin-right: 0;
+      width: 125px;
+      height: 66px;
+      text-align: center;
+      line-height: 66px;
+      background: #fff; }
+      .main .history .history-query i {
+        font-size: 30px;
+        color: #2189bf; }
+      .main .history .history-query span {
+        vertical-align: 3px;
+        color: #535353; }
 
 /*# sourceMappingURL=task_1_9.css.map */
