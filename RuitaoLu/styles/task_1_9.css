@@ -15,6 +15,9 @@ html {
 body {
   margin: 0; }
 
+p {
+  margin: 0; }
+
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block; }
 
@@ -49,6 +52,10 @@ dfn {
 h1 {
   font-size: 2em;
   margin: 0.67em 0; }
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0; }
 
 mark {
   background: #ff0;
@@ -183,7 +190,7 @@ li {
 
 /* start */
 /* clearfix */
-.clearfix:after, .sidebar .archives:after {
+.clearfix:after, .sidebar .archives:after, .main .history:after, .main .project:after {
   content: "";
   height: 0;
   display: block;
@@ -297,7 +304,7 @@ header {
     background: #383d4e; }
 
 /* main */
-.blue-button, .main .query button {
+.blue-button, .main .query button, .main .project .menu-info .menu-body button {
   width: 50px;
   height: 30px;
   border: 0;
@@ -305,13 +312,14 @@ header {
   color: #fff;
   background: #2189bf; }
 
-.shadow, .main .query {
+.shadow, .main .query, .main .history img, .main .history div, .main .menu {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.2); }
 
 .main {
   position: absolute;
   top: 0;
   left: 270px;
+  padding-bottom: 40px;
   width: 1010px;
   max-height: 1266px;
   min-height: 100%;
@@ -378,5 +386,234 @@ header {
       position: absolute;
       top: 50%;
       margin-top: -15px; }
+  .main .history {
+    margin: 0 auto;
+    width: 890px; }
+    .main .history img, .main .history div {
+      float: left;
+      margin-right: 5px; }
+    .main .history img {
+      padding: 23px 10px;
+      width: 12px;
+      height: 20px;
+      background: #fff; }
+    .main .history .history-tab {
+      width: 110px;
+      height: 66px;
+      background: #fff; }
+      .main .history .history-tab span {
+        display: block; }
+      .main .history .history-tab .history-time {
+        padding-top: 10px;
+        margin-bottom: 5px;
+        text-align: center;
+        color: #333;
+        border-top: 4px solid #fff; }
+      .main .history .history-tab .history-money {
+        font-size: 18px;
+        text-align: center;
+        color: #acacab; }
+        .main .history .history-tab .history-money b {
+          font-size: 21px;
+          color: #ec6500; }
+      .main .history .history-tab:hover .history-time {
+        border-top: 4px solid #2189bf; }
+    .main .history .history-query {
+      margin-right: 0;
+      width: 125px;
+      height: 66px;
+      text-align: center;
+      line-height: 66px;
+      background: #fff; }
+      .main .history .history-query i {
+        font-size: 30px;
+        color: #2189bf; }
+      .main .history .history-query span {
+        vertical-align: 3px;
+        color: #535353; }
+  .main .menu {
+    float: left;
+    border-radius: 10px;
+    background: #fff; }
+    .main .menu .menu-header {
+      height: 40px;
+      border-radius: 10px 10px 0 0;
+      background: #f4f5f7; }
+      .main .menu .menu-header h4 {
+        margin-left: 30px;
+        font-weight: 400;
+        line-height: 40px;
+        color: #aaa; }
+  .main .project {
+    margin: 20px auto 0;
+    width: 890px; }
+    .main .project .menu-tab {
+      margin: 0 10px 10px 0;
+      width: 530px;
+      height: 360px; }
+      .main .project .menu-tab .menu-body {
+        padding: 20px; }
+        .main .project .menu-tab .menu-body .menu-tab-list {
+          margin-right: 5px;
+          padding: 5px 20px;
+          border-radius: 5px 5px 0 0;
+          background: #ececef; }
+        .main .project .menu-tab .menu-body .menu-table {
+          margin-top: 5px;
+          padding: 30px 0;
+          width: 100%;
+          border-radius: 0 0 5px 5px;
+          border: 1px solid #aaa; }
+          .main .project .menu-tab .menu-body .menu-table table {
+            margin: 0 auto;
+            width: 80%;
+            border-collapse: collapse; }
+            .main .project .menu-tab .menu-body .menu-table table td {
+              padding: 8px 0;
+              width: 25%;
+              text-align: center;
+              border: 1px solid #ddddde; }
+              .main .project .menu-tab .menu-body .menu-table table td:hover {
+                background: #f4f6f7; }
+        .main .project .menu-tab .menu-body .selected {
+          border: 1px solid #aaa;
+          border-bottom: 1px solid #fff;
+          background: #fff; }
+    .main .project .menu-info {
+      margin-bottom: 10px;
+      width: 350px;
+      height: 360px; }
+      .main .project .menu-info .menu-body {
+        padding: 20px 40px; }
+        .main .project .menu-info .menu-body h4 {
+          margin-bottom: 5px;
+          color: #aaa;
+          font-weight: 400; }
+        .main .project .menu-info .menu-body button {
+          float: right; }
+        .main .project .menu-info .menu-body input[type=checkbox] {
+          vertical-align: bottom; }
+        .main .project .menu-info .menu-body label {
+          color: #aaa; }
+        .main .project .menu-info .menu-body .menu-info-title {
+          padding-bottom: 5px;
+          border-bottom: 1px solid #e8e8e8; }
+        .main .project .menu-info .menu-body .menu-info-price, .main .project .menu-info .menu-body .menu-info-principal {
+          display: inline-block; }
+        .main .project .menu-info .menu-body .menu-info-price {
+          width: 100px; }
+        .main .project .menu-info .menu-body .menu-info-principal {
+          padding-left: 10px;
+          border-left: 1px solid #e8e8e8; }
+        .main .project .menu-info .menu-body .menu-info-describe {
+          margin-bottom: 10px;
+          padding-top: 5px;
+          height: 150px;
+          border: solid #e8e8e8;
+          border-width: 1px 0 1px 0; }
+    .main .project .menu-calendar {
+      margin-right: 10px;
+      width: 350px;
+      height: 360px; }
+      .main .project .menu-calendar .menu-body {
+        margin: 10px auto 0;
+        width: 310px; }
+        .main .project .menu-calendar .menu-body select {
+          margin-right: 5px; }
+        .main .project .menu-calendar .menu-body #year {
+          width: 65px;
+          height: 24px; }
+        .main .project .menu-calendar .menu-body #month {
+          width: 85px;
+          height: 24px; }
+        .main .project .menu-calendar .menu-body #tip-date {
+          width: 80px;
+          height: 24px; }
+        .main .project .menu-calendar .menu-body button {
+          width: 65px;
+          height: 24px;
+          border: 1px solid #aaa;
+          background: #fff; }
+        .main .project .menu-calendar .menu-body table {
+          margin-top: 10px; }
+          .main .project .menu-calendar .menu-body table span {
+            display: block; }
+          .main .project .menu-calendar .menu-body table th {
+            padding: 10px 0;
+            width: 45px;
+            font-weight: 400; }
+            .main .project .menu-calendar .menu-body table th {
+              border-top: 2px solid #a9cfeb;
+              border-bottom: 2px solid #e8e8e8; }
+          .main .project .menu-calendar .menu-body table tr td {
+            width: 40px;
+            height: 40px;
+            text-align: center; }
+          .main .project .menu-calendar .menu-body table tr td:nth-child(6) span:nth-child(1), .main .project .menu-calendar .menu-body table tr td:nth-child(7) span:nth-child(1) {
+            color: #f00; }
+        .main .project .menu-calendar .menu-body .festival {
+          color: #f00; }
+        .main .project .menu-calendar .menu-body .tiped {
+          border: 2px solid #f8d564; }
+    .main .project .menu-list {
+      width: 530px;
+      height: 360px; }
+      .main .project .menu-list .menu-body table {
+        margin: 10px auto 0;
+        border-collapse: collapse; }
+        .main .project .menu-list .menu-body table tr th, .main .project .menu-list .menu-body table tr td {
+          padding: 5px 0;
+          border: 1px solid #e8e8e8; }
+        .main .project .menu-list .menu-body table tr:hover {
+          background: #f4f6f7; }
+        .main .project .menu-list .menu-body table tr th:nth-child(1), .main .project .menu-list .menu-body table tr td:nth-child(1) {
+          width: 70px;
+          text-align: center; }
+        .main .project .menu-list .menu-body table tr th:nth-child(2), .main .project .menu-list .menu-body table tr td:nth-child(2) {
+          width: 100px;
+          text-align: center; }
+        .main .project .menu-list .menu-body table tr th:nth-child(3), .main .project .menu-list .menu-body table tr td:nth-child(3) {
+          padding-left: 30px;
+          width: 290px;
+          text-align: left; }
+        .main .project .menu-list .menu-body table tr .progress {
+          display: inline-block;
+          margin-left: 20px;
+          width: 190px;
+          height: 4px;
+          background: #dcdcdc; }
+          .main .project .menu-list .menu-body table tr .progress b {
+            float: left;
+            height: 4px; }
+        .main .project .menu-list .menu-body table tr .per-1 {
+          width: 80%;
+          background: #ed6e52; }
+        .main .project .menu-list .menu-body table tr .per-2 {
+          width: 70%;
+          background: #ef8150; }
+        .main .project .menu-list .menu-body table tr .per-3 {
+          width: 60%;
+          background: #f19f4f; }
+        .main .project .menu-list .menu-body table tr .per-4 {
+          width: 55%;
+          background: #7fcbf0; }
+        .main .project .menu-list .menu-body table tr .per-5 {
+          width: 50%;
+          background: #7fcbf0; }
+        .main .project .menu-list .menu-body table tr .per-6 {
+          width: 45%;
+          background: #7fcbf0; }
+        .main .project .menu-list .menu-body table tr .per-7 {
+          width: 40%;
+          background: #7fcbf0; }
+        .main .project .menu-list .menu-body table tr .per-8 {
+          width: 35%;
+          background: #7fcbf0; }
+        .main .project .menu-list .menu-body table tr .per-9 {
+          width: 30%;
+          background: #7fcbf0; }
+        .main .project .menu-list .menu-body table tr .per-10 {
+          width: 25%;
+          background: #7fcbf0; }
 
 /*# sourceMappingURL=task_1_9.css.map */
