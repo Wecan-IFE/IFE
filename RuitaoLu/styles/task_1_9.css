@@ -50,6 +50,10 @@ h1 {
   font-size: 2em;
   margin: 0.67em 0; }
 
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0; }
+
 mark {
   background: #ff0;
   color: #000; }
@@ -183,7 +187,7 @@ li {
 
 /* start */
 /* clearfix */
-.clearfix:after, .sidebar .archives:after {
+.clearfix:after, .sidebar .archives:after, .main .history:after, .main .project:after {
   content: "";
   height: 0;
   display: block;
@@ -305,7 +309,7 @@ header {
   color: #fff;
   background: #2189bf; }
 
-.shadow, .main .query, .main .history img, .main .history div {
+.shadow, .main .query, .main .history img, .main .history div, .main .menu {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.2); }
 
 .main {
@@ -424,5 +428,64 @@ header {
       .main .history .history-query span {
         vertical-align: 3px;
         color: #535353; }
+  .main .menu {
+    float: left;
+    border-radius: 10px;
+    background: #fff; }
+    .main .menu .menu-header {
+      height: 40px;
+      border-radius: 10px 10px 0 0;
+      background: #f4f5f7; }
+      .main .menu .menu-header h4 {
+        margin-left: 30px;
+        font-weight: 400;
+        line-height: 40px;
+        color: #aaa; }
+  .main .project {
+    margin: 20px auto 0;
+    width: 890px; }
+    .main .project .menu-tab {
+      margin: 0 10px 10px 0;
+      width: 530px;
+      height: 360px; }
+      .main .project .menu-tab .menu-body {
+        padding: 20px; }
+        .main .project .menu-tab .menu-body .menu-tab-list {
+          margin-right: 5px;
+          padding: 5px 20px;
+          border-radius: 5px 5px 0 0;
+          background: #ececef; }
+        .main .project .menu-tab .menu-body .menu-table {
+          margin-top: 5px;
+          padding: 30px 0;
+          width: 100%;
+          border-radius: 0 0 5px 5px;
+          border: 1px solid #aaa; }
+          .main .project .menu-tab .menu-body .menu-table table {
+            margin: 0 auto;
+            width: 80%;
+            border-collapse: collapse; }
+            .main .project .menu-tab .menu-body .menu-table table td {
+              padding: 8px 0;
+              width: 25%;
+              text-align: center;
+              border: 1px solid #ddddde; }
+              .main .project .menu-tab .menu-body .menu-table table td:hover {
+                background: #f4f6f7; }
+        .main .project .menu-tab .menu-body .selected {
+          border: 1px solid #aaa;
+          border-bottom: 1px solid #fff;
+          background: #fff; }
+    .main .project .menu-info {
+      margin-bottom: 10px;
+      width: 350px;
+      height: 360px; }
+    .main .project .menu-calendar {
+      margin-right: 10px;
+      width: 350px;
+      height: 360px; }
+    .main .project .menu-list {
+      width: 530px;
+      height: 360px; }
 
 /*# sourceMappingURL=task_1_9.css.map */
