@@ -180,7 +180,7 @@ li {
 /* start */
 
 /* clearfix */
-.clearfix:after, .sidebar .archives:after, .main .history:after, .main .project:after {
+.clearfix:after, .sidebar .archives:after, .main .history:after, .main .statistic:after, .main .project:after {
   content: "";
   height: 0;
   display: block;
@@ -190,7 +190,8 @@ li {
 
 /* header */
 header {
-  position: relative;
+  position: fixed;
+  z-index: 1;
   width: 100%;
   min-width: 1280px;
   height: 60px;
@@ -248,12 +249,14 @@ header .search span i {
 /* sidebar */
 .sidebar {
   position: absolute;
-  top: 0;
+  top: 60px;
   left: 0;
-  padding: 20px 0;
   width: 270px;
   min-height: 100%;
   background: #2a2e3d;
+}
+.sidebar .sidebar-head {
+  margin-top: 20px;
 }
 .sidebar .sidebar-head .avatar {
   display: inline-block;
@@ -325,14 +328,13 @@ header .search span i {
   color: #fff;
   background: #2189bf;
 }
-.shadow, .main .query, .main .history img, .main .history div, .main .menu {
+.shadow, .main .query, .main .history img, .main .history div, .main .statistic .stat-menu, .main .menu {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
 }
 .main {
   position: absolute;
-  top: 0;
+  top: 60px;
   left: 270px;
-  padding-bottom: 40px;
   width: 1010px;
   max-height: 1266px;
   min-height: 100%;
@@ -475,6 +477,68 @@ header .search span i {
 .main .history .history-query span {
   vertical-align: 3px;
   color: #535353;
+}
+.main .statistic {
+  margin: 20px auto 0;
+  width: 890px;
+}
+.main .statistic h4 {
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+.main .statistic .stat-menu {
+  position: relative;
+  float: left;
+  margin-right: 30px;
+  padding: 0 20px;
+  width: 156px;
+  height: 70px;
+  background: #fff;
+}
+.main .statistic .stat-menu span {
+  display: block;
+}
+.main .statistic .stat-menu span:nth-child(1) {
+  margin: 20px 0 5px 0;
+}
+.main .statistic .stat-menu span:nth-child(2) {
+  font-size: 11px;
+  color: #aaa;
+}
+.main .statistic .stat-menu span:nth-child(3) {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  margin-top: -25px;
+  width: 60px;
+  height: 50px;
+}
+.main .statistic .stat-menu:last-child {
+  margin-right: 0;
+}
+.main .statistic .stat-1 {
+  border-left: 4px solid #43b29e;
+}
+.main .statistic .stat-1 span:nth-child(3) {
+  background: #43b29e;
+}
+.main .statistic .stat-2 {
+  border-left: 4px solid #388ac1;
+}
+.main .statistic .stat-2 span:nth-child(3) {
+  background: #388ac1;
+}
+.main .statistic .stat-3 {
+  border-left: 4px solid #d04a36;
+}
+.main .statistic .stat-3 span:nth-child(3) {
+  background: #d04a36;
+}
+.main .statistic .stat-4 {
+  border-left: 4px solid #e2cd46;
+}
+.main .statistic .stat-4 span:nth-child(3) {
+  background: #e2cd46;
 }
 .main .menu {
   float: left;
