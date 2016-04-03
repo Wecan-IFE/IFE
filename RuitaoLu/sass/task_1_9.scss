@@ -191,7 +191,8 @@ li{
 /* header */
 $blue: #2189bf;
 header{
-  position: relative;
+  position: fixed;
+  z-index: 1;
   width: 100%;
   min-width: 1280px;
   height: 60px;
@@ -251,13 +252,13 @@ $sidebar-active: #ededf0;
 $sidebar-default: #67778b;
 .sidebar{
   position: absolute;
-  top: 0;
+  top: 60px;
   left: 0;
-  padding: 20px 0;
   width: 270px;
   min-height: 100%;
   background: #2a2e3d;
   .sidebar-head{
+    margin-top: 20px;
     .avatar{
       display: inline-block;
       margin-left: 30px; 
@@ -340,9 +341,8 @@ $grey: #aaa;
 }
 .main{
   position: absolute;
-  top: 0;
+  top: 60px;
   left: 270px;
-  padding-bottom: 40px;
   width: 1280px-270px;
   max-height: 1266px;
   min-height: 100%;
@@ -486,6 +486,70 @@ $grey: #aaa;
       span{
         vertical-align: 3px;
         color: #535353;
+      }
+    }
+  }
+  .statistic{
+    @extend .clearfix;
+    margin: 20px auto 0;
+    width: 890px;
+    h4{
+      margin-bottom: 5px;
+      font-weight: 400;
+    }
+    .stat-menu{
+      @extend .shadow;
+      position: relative;
+      float: left;
+      margin-right: 30px;
+      padding: 0 20px;
+      width: 156px;
+      height: 70px;
+      background: #fff;
+      span{
+        display: block;
+      }
+      span:nth-child(1){
+        margin: 20px 0 5px 0;
+      }
+      span:nth-child(2){
+        font-size: 11px;
+        color: $grey;
+      }
+      span:nth-child(3){
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        margin-top: -25px;
+        width: 60px;
+        height: 50px;
+      }
+    }
+    .stat-menu:last-child{
+      margin-right: 0;
+    }
+    .stat-1{
+      border-left: 4px solid #43b29e;
+      span:nth-child(3){
+        background: #43b29e;
+      }
+    }
+    .stat-2{
+      border-left: 4px solid #388ac1;
+      span:nth-child(3){
+        background: #388ac1;
+      }
+    }
+    .stat-3{
+      border-left: 4px solid #d04a36;
+      span:nth-child(3){
+        background: #d04a36;
+      }
+    }
+    .stat-4{
+      border-left: 4px solid #e2cd46;
+      span:nth-child(3){
+        background: #e2cd46;
       }
     }
   }
