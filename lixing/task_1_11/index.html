@@ -3,158 +3,61 @@
 
 <head>
 	<meta charset="utf-8" />
-	<!--
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 	<meta content="yes" name="apple-mobile-web-app-capable">
 	<meta content="black" name="apple-mobile-web-app-status-bar-style">
 	<meta content="telephone=no" name="format-detection">
-	-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
 	<title>网站标题</title>
-	<style type="text/css">
-	p{
-	   font-size:20px;/*设置文字字号*/
-	   color:red;/*设置文字颜色*/
-	   font-weight:bold;/*设置字体加粗*/
-	}
-	#title {
-		color:white;
-		background-color: #91D4DA;
-		height: 4rem;
-		line-height: 4rem;
-	 	width: 100%;
-	 	display: block;
-	 	text-align: center;
-	  	font-weight: bold;
-	}
+  	<link rel="stylesheet" href="style/index.css">
 
-nav {
-  width: 100%;
-  height: 4rem;
-}
-nav ul {
-  list-style: none;
-  letter-spacing: -0.5em;
-}
-nav ul li {
-  display: inline-block;
-  letter-spacing: 0;
-  width: 20%;
-  line-height: 4rem;
-  font-size: 1.4rem;
-  color: #606060;
-  text-align: center;
-  position: relative;
-}
-nav ul li.nav_active::after {
-  content: '';
-  width: 100%;
-  height: 0.3rem;
-  display: block;
-  position: absolute;
-  bottom: -0.1rem;
-  left: 0;
-  background-color: #8FD6DA;
-}
-
-
-
-
-
-
-
-
-
-body{
-    margin: 0;
-    padding: 0;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-
-}
-
-li{
-    list-style: none;
-}
-
-.chose-span {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.flex-item {
-    padding: 5px;
-    width: 200px;
-    height: 150px;
-    margin-top: 10px;
-
-    line-height: 150px;
-    color: white;
-    font-weight: bold;
-    font-size: 3em;
-    text-align: center;
-}
-
-
-.col {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
-
-.m-list {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
-
-
-	#head-photo {
-	  text-align: center;
-	}
-
-    #chose-span {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: stretch;
-    }
-
-</style>
-  <!-- <link rel="stylesheet" href="styles/index.css">-->
 </head>
 
 <body>
-
+<div id="control">
 	<header>
-
+ 		<h1 id="return"><返回</h1> 
 		<h1 id="title">这是标题</h1>
 
 	    <nav id="box1">
-	        <ul id="navigation">
-	            <li><a href="">导航</a></li>
-	            <li><a href="">导航</a></li>
-	            <li><a href="">导航</a></li>
-	            <li><a href="">导航</a></li>
-	            <li><a href="">导航</a></li>
+	        <ul class="box1">
+	            <li class="guide">导航</li>
+	            <li class="guide">导航</li>
+	            <li class="guide">导航</li>
+	            <li class="guide">导航</li>
+	            <li class="guide">导航</li>
 	        </ul>
 	    </nav>
 
 	</header>
 
-	<div id="head-photo">
-	<img src="https://github.com/Wecan-IFE/IFE/blob/develop/lixing/task_1_11/images/bear.png?raw=true" alt="head-photo" />
+	<div>
+		<img class="head-photo" src="https://github.com/Wecan-IFE/IFE/blob/develop/lixing/task_1_11/images/bear.png?raw=true" alt="head-photo" />
 	</div>
 
 	<div>
-		<ul class="chose-span">
-			<li class="flex-item">
+		<ul class="flexline">
+			<li class="label">
 				<img src="https://github.com/Wecan-IFE/IFE/blob/develop/lixing/task_1_11/images/tab.png?raw=true" alt="text" />
 				<aside>标签</aside>
 			</li>
-			<li class="flex-item">
+			<li class="label">
+				<img src="https://github.com/Wecan-IFE/IFE/blob/develop/lixing/task_1_11/images/tab.png?raw=true" alt="text" />
+				<aside>标签</aside>
+			</li>
+			<li class="label">
+				<img src="https://github.com/Wecan-IFE/IFE/blob/develop/lixing/task_1_11/images/tab.png?raw=true" alt="text" />
+				<aside>标签</aside>
+			</li>
+			<li class="label">
+				<img src="https://github.com/Wecan-IFE/IFE/blob/develop/lixing/task_1_11/images/tab.png?raw=true" alt="text" />
+				<aside>标签</aside>
+			</li>
+			<li class="label">
 				<img src="https://github.com/Wecan-IFE/IFE/blob/develop/lixing/task_1_11/images/tab.png?raw=true" alt="text" />
 				<aside>标签</aside>
 			</li>
@@ -164,78 +67,132 @@ li{
 
 	<div>
 		<ul class="col">
-			<li>
-				<img src="https://github.com/Wecan-IFE/IFE/blob/develop/lixing/task_1_11/images/col-1.png?raw=true" alt="col-1">
-				<h2>分栏一</h2>
-				<h3>分栏小标题</h3>
+			<li class="col-item">
+				<img src="https://github.com/Wecan-IFE/IFE/blob/develop/lixing/task_1_11/images/1.jpg?raw=true" alt="col-1">
+				<h2 class="col-text">分栏一</h2>
+				<h3 class="col-text">分栏小标题</h3>
 			</li>
-			<li>
-				<img src="https://github.com/Wecan-IFE/IFE/blob/develop/lixing/task_1_11/images/col-2.png?raw=true" alt="col-2">
-				<h2>分栏二</h2>
-				<h3>分栏小标题</h3>
+			<li class="col-item-center">
+				<img src="https://github.com/Wecan-IFE/IFE/blob/develop/lixing/task_1_11/images/2.jpg?raw=true" alt="col-2">
+				<h2 class="col-text">分栏二</h2>
+				<h3 class="col-text">分栏小标题</h3>
 			</li>
-			<li>
-				<img src="https://github.com/Wecan-IFE/IFE/blob/develop/lixing/task_1_11/images/col-3.png?raw=true" alt="col-3">
-				<h2>分栏三</h2>
-				<h3>分栏小标题</h3>
+			<li class="col-item">
+				<img src="https://github.com/Wecan-IFE/IFE/blob/develop/lixing/task_1_11/images/3.jpg?raw=true" alt="col-3">
+				<h2 class="col-text">分栏三</h2>
+				<h3 class="col-text">分栏小标题</h3>
 			</li>
 		</ul>
 	</div>
 
-	<section>
+	<div id="break"></div>
+
+	<section class="m1">
 		<div class="m1-title">
-			<h1>模块一</h1>
+			<h2>模块一</h2>
 		</div>
 
 		<ul class="m-list">
-			<li>
-				<img src="https://github.com/Wecan-IFE/IFE/blob/develop/lixing/task_1_11/images/mod.png?raw=true">
-				<li>
-					<div class="text-1">这是文案</div>
-					<div class="text-1">这是文案</div>
+				<li class="m-1">
+					<img style="border:1px orange solid;"src="https://github.com/Wecan-IFE/IFE/blob/develop/lixing/task_1_11/images/mod.png?raw=true">
 				</li>
-				<li>
-					<div class="text-1">这是文案</div>
-					<div class="text-1">这是文案</div>
+
+				<li class="m-2">
+					<div class="m-text"> 这是文案 </div>
+					<div class="m-text"> 这是文案 </div>
 				</li>
-			</li>
+
+				<li class="m-2">
+					<div class="m-text"> 这是文案 </div>
+					<div class="m-text"> 这是文案 </div>
+				</li>
 		</ul>
+
 		<ul class="m-list">
-			<li>
-				<img src="https://github.com/Wecan-IFE/IFE/blob/develop/lixing/task_1_11/images/mod.png?raw=true">
-				<li>
-					<div class="text-1">这是文案</div>
-					<div class="text-1">这是文案</div>
+				<li class="m-1">
+					<img style="border:1px orange solid;"src="https://github.com/Wecan-IFE/IFE/blob/develop/lixing/task_1_11/images/mod.png?raw=true">
 				</li>
-				<li>
-					<div class="text-1">这是文案</div>
-					<div class="text-1">这是文案</div>
+
+				<li class="m-2">
+					<div class="m-text"> 这是文案 </div>
+					<div class="m-text"> 这是文案 </div>
 				</li>
-			</li>
+
+				<li class="m-2">
+					<div class="m-text"> 这是文案 </div>
+					<div class="m-text"> 这是文案 </div>
+				</li>
 		</ul>
+
 	</section>
+
+	<div id="break"></div>
+
+	<section class="m1">
+		<div class="m1-title">
+			<h2>模块二</h2>
+		</div>
+
+		<ul class="m-list">
+				<li class="m-1">
+					<img style="border:1px orange solid;"src="https://github.com/Wecan-IFE/IFE/blob/develop/lixing/task_1_11/images/mod.png?raw=true">
+				</li>
+
+				<li class="m-2">
+					<div class="m-text"> 这是文案 </div>
+					<div class="m-text"> 这是文案 </div>
+				</li>
+
+				<li class="m-2">
+					<div class="m-text"> 这是文案 </div>
+					<div class="m-text"> 这是文案 </div>
+				</li>
+		</ul>
+
+		<ul class="m-list">
+				<li class="m-1">
+					<img style="border:1px orange solid;"src="https://github.com/Wecan-IFE/IFE/blob/develop/lixing/task_1_11/images/mod.png?raw=true">
+				</li>
+
+				<li class="m-2">
+					<div class="m-text"> 这是文案 </div>
+					<div class="m-text"> 这是文案 </div>
+				</li>
+
+				<li class="m-2">
+					<div class="m-text"> 这是文案 </div>
+					<div class="m-text"> 这是文案 </div>
+				</li>
+		</ul>
+
+	</section>
+
+	<div id="break"></div>
 
 	<section id="article">
 		<div class="atc-1">
 
-			<img src="https://github.com/Wecan-IFE/IFE/blob/develop/lixing/task_1_11/images/article.png?raw=true">
-			<h3 class="atc-title">这是文章标题字号是22的文章标题</h3>
-            <span class="time">文章来源 六分钟前</span>
+			<img class="art-1-img" src="https://github.com/Wecan-IFE/IFE/blob/develop/lixing/task_1_11/images/article.png?raw=true">
+			<aside>
+				<h2 class="atc-title">这是文章标题字号是22的文章标题</h2>
+	            <span class="time">文章来源 六分钟前</span>
+			</aside>
 			
 		</div>
 		<div class="atc-2">
-			<h3 class="atc-title">这是文章标题字号是22的文章标题</h3>
-			<img src="https://github.com/Wecan-IFE/IFE/blob/develop/lixing/task_1_11/images/article.png?raw=true">
-			<img src="https://github.com/Wecan-IFE/IFE/blob/develop/lixing/task_1_11/images/article.png?raw=true">
-			<img src="https://github.com/Wecan-IFE/IFE/blob/develop/lixing/task_1_11/images/article.png?raw=true">
+			<h2 class="atc-title">这是文章标题字号是22的文章标题</h2>
+			<div class="flexline">
+				<img class="art-2-img" src="https://github.com/Wecan-IFE/IFE/blob/develop/lixing/task_1_11/images/article.png?raw=true">
+				<img class="art-2-img" src="https://github.com/Wecan-IFE/IFE/blob/develop/lixing/task_1_11/images/article.png?raw=true">
+				<img class="art-2-img" src="https://github.com/Wecan-IFE/IFE/blob/develop/lixing/task_1_11/images/article.png?raw=true">
+			</div>
+			
             <span class="time">文章来源 六分钟前</span>
 			
 		</div>
 	</section>
 
-	<footer>
-	    <span>版权所有&copy;</span>
-	</footer>
 	<p></p>
+</div>
 </body>
 </html>
