@@ -1,0 +1,166 @@
+body{
+	background-color: #02071D;
+	margin: 0;
+	padding: 0;
+	-moz-user-select:none;
+	-webkit-user-select:none;
+	user-select:none;   
+}
+/*太阳和内部斑点*/
+.sun{
+	width:200px;
+	height:200px;
+	background-color: #EC554A;
+	border-radius: 100px;
+	margin-top:-100px;
+	margin-left:-100px;
+	overflow: hidden;
+	animation: rotate 5s linear infinite;
+}
+@keyframes rotate
+{
+from {transform:rotate(0deg);}
+to {transform:rotate(360deg);}
+}
+.smallSun-1{
+	position: absolute;
+	top:50px;
+	left:30px;
+	width:40px;
+	height:40px;
+	border-radius: 20px;
+	background-color: #C83B38;
+}
+.smallSun-2{
+	position: absolute;
+	top:10px;
+	left:70px;
+	width:30px;
+	height:30px;
+	border-radius: 15px;
+	background-color: #C83B38;
+}
+.smallSun-3{
+	position: absolute;
+	top:100px;
+	left:175px;
+	width:50px;
+	height:50px;
+	border-radius: 25px;
+	background-color: #C83B38;
+}
+/*小行星*/
+.planet-1{
+	background: #F5A83E;
+	width:50px;
+	height:50px;
+	position: absolute;
+	top:20%;
+	left:30%;
+	border-radius: 25px;
+	overflow: hidden;
+	animation: rotate 5s linear infinite;
+}
+.hole-1{
+	position: absolute;
+	top:-10px;
+	letter-spacing: 25px;px;
+	width:20px;
+	height:20px;
+	border-radius: 10px;
+	background-color: #FFEB28;
+}
+.hole-2{
+	width: 20px;
+	height:20px;
+	border-radius: 10px;
+	position: absolute;
+	left:10px;
+	top:15px;
+	background: #DE8E31;
+}
+/*轨道与飞船*/
+.sun,.pathway-1,.pathway-2,.pathway-3,.pathway-4,.dirigible-1{
+	position: absolute;
+	top:50%;
+	left:50%;
+}
+.pathway-1{
+	width:300px;
+	height:300px;
+	margin-left: -150px;
+	margin-top: -150px;
+	border: 2px solid #3E4059;
+}
+.pathway-1{
+	border-radius: 150px;
+}
+.dirigible-1{
+	width:300px;
+	height:300px;
+	margin-left: -150px;
+	margin-top: -150px;
+/*	border: 2px solid #3E4059;*/
+	animation: rotate 5s linear infinite;
+}
+.craft-1{
+	background: #2FA06C;
+	position: absolute;
+	width:50px;
+	height: 30px;
+	top:-15px;
+	left:125px;
+	text-align: center;
+	border-radius: 4px;
+}
+.craft-1 span{
+	line-height: 30px;
+}
+.pathway-2{
+	width:400px;
+	height:400px;
+	margin-left: -200px;
+	margin-top: -200px;
+	border: 2px solid #3E4059;
+}
+.pathway-3{
+	width:500px;
+	height:500px;
+	margin-left: -250px;
+	margin-top: -250px;
+	border: 2px solid #3E4059;
+}
+.pathway-4{
+	width:600px;
+	height:600px;
+	margin-left: -300px;
+	margin-top: -300px;
+	border: 2px solid #3E4059;
+}
+/*控制台，指挥官信号*/
+#control-title,#console-title{
+    color: white;
+    background-color: #DD7B3B;
+    box-sizing: border-box;
+    width: 500px;
+    height: 40px;
+    cursor: pointer;
+    border-radius-top:4px;
+    text-align: center;
+    font-size: 2em;
+    font-family: "楷体","宋体";
+}
+#control,#console{
+    background-color: rgba(150, 150, 150, 0.35);
+    width: 500px;
+    position: absolute;
+    z-index: 101;
+    border-radius: 4px;
+}
+#control-main,#console-main{
+    overflow: auto;
+    color: white;
+    width: 500px;
+    padding: 10px;
+    box-sizing: border-box;
+}
