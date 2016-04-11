@@ -11,13 +11,18 @@ body{
 	width:200px;
 	height:200px;
 	background-color: #EC554A;
-	/*border-radius: 100px;*/
+	border-radius: 100px;
 	margin-top:-100px;
 	margin-left:-100px;
 	overflow: hidden;
 }
 .rotating{
-	animation: rotate 5s linear infinite;
+	animation: rotate 10s linear infinite;
+	animation-play-state:paused;
+	-webkit-animation-play-state:paused;
+}
+.rotate{
+	animation: rotate 10s linear infinite;
 }
 @keyframes rotate
 {
@@ -52,7 +57,7 @@ to {transform:rotate(360deg);}
 	background-color: #C83B38;
 }
 /*小行星*/
-.planet-1{
+.planet{
 	background: #F5A83E;
 	width:50px;
 	height:50px;
@@ -65,7 +70,7 @@ to {transform:rotate(360deg);}
 .hole-1{
 	position: absolute;
 	top:-10px;
-	letter-spacing: 25px;px;
+	letter-spacing: 25px;
 	width:20px;
 	height:20px;
 	border-radius: 10px;
@@ -81,40 +86,24 @@ to {transform:rotate(360deg);}
 	background: #DE8E31;
 }
 /*轨道与飞船*/
-.sun,.pathway-1,.pathway-2,.pathway-3,.pathway-4,#dirigible-1{
+.sun,.pathway,.dirigible{
 	position: absolute;
 	top:50%;
 	left:50%;
 }
-.pathway-1{
-	width:300px;
-	height:300px;
-	margin-left: -150px;
-	margin-top: -150px;
+.pathway,.dirigible{
 	border: 2px solid #3E4059;
 }
-.pathway-1{
-	border-radius: 150px;
-}
-#dirigible-1{
-	width:300px;
-	height:300px;
-	margin-left: -150px;
-	margin-top: -150px;
-	border: 2px solid #3E4059;
-	transform:rotate(0deg);
-}
-.craft-1{
+.craft{
 	position: absolute;
 	width:50px;
 	height: 30px;
 	top:-15px;
-	left:125px;
 	text-align: center;
 	border-radius: 4px;
 	background: #fff;
 }
-.energy-1{
+.energy{
 	width: 100%;
 	height:100%;
 	border-radius: 4px;
@@ -122,30 +111,12 @@ to {transform:rotate(360deg);}
 	position: absolute;
 	top:0px;
 	left:0px;
+	z-index: 2;
 }
-.craft-1 span{
+.craft span{
+	position: relative;
 	line-height: 30px;
-}
-.pathway-2{
-	width:400px;
-	height:400px;
-	margin-left: -200px;
-	margin-top: -200px;
-	border: 2px solid #3E4059;
-}
-.pathway-3{
-	width:500px;
-	height:500px;
-	margin-left: -250px;
-	margin-top: -250px;
-	border: 2px solid #3E4059;
-}
-.pathway-4{
-	width:600px;
-	height:600px;
-	margin-left: -300px;
-	margin-top: -300px;
-	border: 2px solid #3E4059;
+	z-index: 10;
 }
 /*控制台，指挥官信号*/
 #control-title,#console-title{
@@ -160,6 +131,12 @@ to {transform:rotate(360deg);}
     font-size: 2em;
     font-family: "楷体","宋体";
 }
+.warning{
+	color: #8a6d3b;
+}
+.info{
+	color: #31708f;
+}
 #control,#console{
     background-color: rgba(150, 150, 150, 0.35);
     width: 500px;
@@ -168,18 +145,24 @@ to {transform:rotate(360deg);}
     border-radius: 4px;
 }
 #control-main,#console-main{
-    overflow: auto;
     color: white;
     width: 500px;
     padding: 10px;
     box-sizing: border-box;
 }
+#console-main{
+	height:300px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
 /*控制台*/
-#create-1,#fly-1{
-	width:100px;
+.control button{
+	width:90px;
 	height: 34px;
 	padding: 6px 12px;
-	font-size: 14px;
+	font-size: 13px;
+	margin-top: 10px;
+	margin-left: 10px;
 	font-weight:bolder;
 	line-height: 1.42857143;
 	color: #555;
