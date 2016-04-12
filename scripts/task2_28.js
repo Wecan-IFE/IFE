@@ -115,7 +115,6 @@ object.prototype={
 			if (this.energyReduce) {
 	            clearInterval(this.energyReduce);
 	        }
-	        this.power();
 			this.div_1.style.animationPlayState="running";
 			this.div_1.style.animationDuration=12/parseInt(this.powerGrade)+"s";
 			this.energyReduce=setInterval(function(){
@@ -144,7 +143,6 @@ object.prototype={
 		var p=document.createElement("p");
 		if(Math.random()>0.1){
 			var that=this;
-			this.energy();
 			this.div_1.style.animationPlayState="paused";
 			clearInterval(this.energyReduce);
 			if (this.energyIncrease) {
@@ -174,6 +172,8 @@ object.prototype={
 		var that=this;
 		this.btnCreate.addEventListener("click",function(){
 			that.createCraft();
+			that.energy();
+			that.power();
 		});
 		this.btnDestroy.addEventListener("click",function(){
 			that.destroyCraft();
