@@ -4,54 +4,21 @@
 	<meta charset="UTF-8">
 	<title>task_2_31</title>
 	<style>
-		*{
-			margin: 0;
-			padding: 0;
-		}
-		input{
-			outline: none;
-		}
-		.warp{
-			margin-top: 200px;
-			text-align: center;
-		}
-		.choice{
-			margin-bottom: 20px;
-		}
-		.choice label{
-			margin: 10px;
-		}
-		.choice input{
-			vertical-align: middle;
-		}
-		.stu span{
-			margin-right: 20px;
-		}
-		select{
-			margin-right: 10px;
-			padding-left: 10px;
-			width: 180px;
-			height: 40px;
-			border: 1px solid #ccc;
-			border-radius: 5px;
-			outline: none;
-		}
-		.no-stu{
-			display: none;
-		}
-		.no-stu label{
-			margin-right: 20px;
-		}
-		.no-stu input{
-			padding-left: 20px;
-			width: 300px;
-			height: 30px;
-			border: 1px solid #ccc;
-			border-radius: 5px;
-		}
+		*{margin:0;padding:0;}
+		input{outline:none;}
+		select{margin-right:10px;padding-left:10px;width:180px;height:40px;border:1px solid #ccc;border-radius:5px;outline:none;}
+		.warp{margin-top:200px;text-align:center;}
+		.choice{margin-bottom:20px;}
+		.choice label{margin:10px;}
+		.choice input{vertical-align:middle;}
+		.stu span{margin-right:20px;}
+		.no-stu{display:none;}
+		.no-stu label{margin-right:20px;}
+		.no-stu input{padding-left:20px;width:300px;height:30px;border:1px solid #ccc;border-radius:5px;}
 	</style>
 </head>
 <body>
+
 	<div class="warp">
 		<div class="choice">
 			<label for="atSchool">在校生</label>
@@ -71,17 +38,18 @@
 	</div>
 
 	<script>
-		// 学校数据
+		// 学校json数据
 		var data = [{
-		  address: '北京',
-		  name: ['北京大学', '清华大学','北京航空航天大学']
-		}, {
-		  address: '上海',
-		  name: ['复旦大学', '上海大学', '上海交通大学', '华东理工大学']
-		}, {
-		  address: '广东',
-		  name: ['广东工业大学', '中山大学', '华南理工大学', '深圳大学', '广东外语外贸大学']
+			address: '北京',
+			name: ['北京大学', '清华大学','北京航空航天大学']
+		},{
+		    address: '上海',
+		    name: ['复旦大学', '上海大学', '上海交通大学', '华东理工大学']
+		},{
+		    address: '广东',
+		    name: ['广东工业大学', '中山大学', '华南理工大学', '深圳大学', '广东外语外贸大学']
 		}];
+
 		// 定义变量
 		var atSchool = document.getElementById('atSchool');
 		var outSchool = document.getElementById('outSchool');
@@ -89,6 +57,8 @@
 		var school = document.getElementById('school');
 		var stu = document.querySelector('.stu');
 		var noStu = document.querySelector('.no-stu');
+		var radio = document.querySelectorAll('input[type=radio]');
+
 		// 在校生和非在校生切换模块
 		var display = (function(){
 			var showHide = function(show,hide){
@@ -96,9 +66,10 @@
 				hide.style.display = "none";
 			};
 			return{
-				showHide : showHide,
+				showHide : showHide
 			}
 		}());
+
 		// 联动模块
 		var link = (function(){
 			// 遍历填值
@@ -130,30 +101,25 @@
 			}
 		}());
 
+		// 切换显示在校生和非在校生部分
+		for(var i = 0;i < radio.length;i++){
+			radio[i].onclick = function(){
+				if(atSchool.checked){
+					display.showHide(stu,noStu);
+				}
+				else{
+					display.showHide(noStu,stu);
+				}
+			};
+		};
+
 		// 填入城市
 		link.paint(city);
 		link.secondLevel(city);
+
 		// 更换城市选项时二级联动
 		city.onclick = function(){
 			link.secondLevel(city);
-		};
-
-		// 显示隐藏在校生和非在校生部分
-		atSchool.onclick = function(){
-			if(atSchool.checked){
-				display.showHide(stu,noStu);
-			}
-			else{
-				display.showHide(noStu,stu);
-			}
-		};
-		outSchool.onclick = function(){
-			if(atSchool.checked){
-				display.showHide(stu,noStu);
-			}
-			else{
-				display.showHide(noStu,stu);
-			}
 		};
 
 	</script>
