@@ -70,6 +70,8 @@ object.prototype={
 			this.div_1.style.borderRadius=150+i*50+"px";
 			this.div_1.style.marginLeft=-150-this.id*50+"px";
 			this.div_2.style.left=125+this.id*50+"px";
+
+			this.createInfo();
 		}else{
 			p.innerText="[注意]"+parseInt(this.id+1)+"号飞船创建的指令丢包了！";
 			p.className="warning";
@@ -83,6 +85,7 @@ object.prototype={
 			p.className="info";
 			this.createCraftNew.appendChild(p);
 			body.removeChild(this.div_1);
+			this.table.removeChild(this.tr);
 		}else{
 			p.innerText="[注意]销毁"+parseInt(this.id+1)+"号飞船的指令丢包了！";
 			p.className="warning";
@@ -92,25 +95,53 @@ object.prototype={
 	power:function(){
 		var that=this;
 		var power=document.querySelectorAll(".powerSelect ul li label input");
+		var grade_1=document.querySelectorAll(".powerSelect ul li label span");
 		for(var i=0;i<power.length;i++){
 			if(power[i].checked){
 				that.powerGrade=power[i].value;
+				that.grade_1=grade_1[i].innerText;
 			}
 		}
 	},
 	energy:function(){
 		var that=this;
 		var energy=document.querySelectorAll(".energySelect ul li label input");
+		var grade_2=document.querySelectorAll(".energySelect ul li label span");
 		for(var i=0;i<energy.length;i++){
 			if(energy[i].checked){
 				that.energyGrade=energy[i].value;
+				that.grade_2=grade_2[i].innerText;
 			}
 		}
+	},
+	createInfo:function(){
+		this.table=document.querySelector("#craftInfo-main table");
+		this.tr=document.createElement("tr");
+		this.td_1=document.createElement("td");
+		this.td_2=document.createElement("td");
+		this.td_3=document.createElement("td");
+		this.td_4=document.createElement("td");
+		this.td_5=document.createElement("td");
+
+		this.td_1.innerText=parseInt(this.id+1)+"号飞船";
+		this.td_2.innerText=this.grade_1;
+		this.td_3.innerText=this.grade_2;
+		this.td_4.innerText="停止中";
+		
+		this.td_5.innerText="100%";
+
+		this.tr.appendChild(this.td_1);
+		this.tr.appendChild(this.td_2);
+		this.tr.appendChild(this.td_3);
+		this.tr.appendChild(this.td_4);
+		this.tr.appendChild(this.td_5);
+		this.table.appendChild(this.tr);
 	},
 	flyCraft:function(){
 		var p=document.createElement("p");
 		if(Math.random()>0.1){
 			var that=this;
+			this.td_4.innerText="飞行中";
 			clearInterval(this.energyIncrease);
 			if (this.energyReduce) {
 	            clearInterval(this.energyReduce);
@@ -122,6 +153,7 @@ object.prototype={
 				energyNum--;
 				that.div_3.style.width=energyNum+"%";
 				that.span.innerText=energyNum+"%";
+				that.td_5.innerText=energyNum+"%";
 				if(energyNum <= 0){
 					that.stopCraft();
 					energyNum=0;
@@ -142,6 +174,7 @@ object.prototype={
 	stopCraft:function(){
 		var p=document.createElement("p");
 		if(Math.random()>0.1){
+			this.td_4.innerText="停止中";
 			var that=this;
 			this.div_1.style.animationPlayState="paused";
 			clearInterval(this.energyReduce);
@@ -154,6 +187,7 @@ object.prototype={
 					energyNum++;
 					that.div_3.style.width=energyNum+"%";
 					that.span.innerText=energyNum+"%";
+					that.td_5.innerText=energyNum+"%";
 					if (energyNum >= 40) {
 	                    that.div_3.style.backgroundColor = "#2fa06c";
 	                }
@@ -171,9 +205,9 @@ object.prototype={
 	initEvent:function(){
 		var that=this;
 		this.btnCreate.addEventListener("click",function(){
-			that.createCraft();
 			that.energy();
 			that.power();
+			that.createCraft();
 		});
 		this.btnDestroy.addEventListener("click",function(){
 			that.destroyCraft();
