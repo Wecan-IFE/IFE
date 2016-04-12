@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 14</title>
+</head>
+<body>
+
+<h3>污染城市列表</h3>
+<ul id="aqi-list">
+    <!--
+        <li>第一名：福州（样例），10</li>
+          <li>第二名：福州（样例），10</li> -->
+</ul>
+
+<script type="text/javascript">
+
+    var aqiData = [
+        ["北京", 90],
+        ["上海", 50],
+        ["福州", 10],
+        ["广州", 50],
+        ["成都", 90],
+        ["西安", 100]
+    ];
+
+    (function () {
+
+        /*
+         在注释下方编写代码
+         遍历读取aqiData中各个城市的数据
+         将空气质量指数大于60的城市显示到aqi-list的列表中
+         */
+
+//        选出空气质量大于60的城市
+         var filterResult=aqiData.filter(function (item) {
+             return (item[1]>=60);
+         });
+
+//        根据空气质量从大到小的顺序进行排序
+
+//        不使用匿名函数实现
+//        filterResult.sort(compare);
+//        function compare(item1,item2){
+//            return item2[1]-item1[1];
+//        }
+
+//        使用匿名函数实现
+        filterResult.sort(function (item1, item2) {
+            return item2[1]-item1[1];
+        });
+
+//        向列表中添加已排好序的符合条件的数组元素
+
+        var ul=document.getElementById("aqi-list");
+        //        每次循环都appendChild,虽然思路清晰，但是重绘会导致性能下降
+
+//        for(var i=0;i<filterResult.length;i++){
+//            var li=document.createElement("li");
+//            li.innerHTML="第"+(i+1)+"名："+filterResult[i][0]+","+filterResult[i][1];
+//            ul.appendChild(li);
+//        }
+
+//        不必每次appendChild
+        for(var i=0;i<filterResult.length;i++){
+            ul.innerHTML+="<li>第"+(i+1)+"名："+filterResult[i][0]+","+filterResult[i][1]+"</li>";
+        }
+
+    })();
+
+</script>
+</body>
+</html>

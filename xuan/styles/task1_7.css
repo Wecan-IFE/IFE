@@ -1,0 +1,624 @@
+html{
+    font-family: "Microsoft YaHei",sans-serif;
+}
+body,nav,h1,h2,h3,h4,ul,p,figure,figcaption,form,select,li,section,textarea{
+    margin:0;
+    padding: 0;
+}
+nav{
+    z-index: 1;
+    position: fixed;
+    width: 90%;
+    height: 50px;
+    padding: 0 5%;
+    background-color: #fff;
+}
+nav>img{
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+nav h1{
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    color: #717171;
+    margin-left: 7px;
+}
+nav ul{
+    float: right;
+    list-style: none;
+}
+nav li{
+    float: left;
+    font-size: 14px;
+    padding:0 10px;
+}
+nav a{
+    display: inline-block;
+    color: #717171;
+    text-decoration: none;
+    height: 45px;
+    line-height: 46px;
+}
+nav a:hover{
+    color: #e74c4a;
+    border-bottom: 4px solid #e74c4a;
+}
+nav a img{
+    width: 12px;
+    vertical-align: baseline;
+}
+header>section{
+    height: 200px;
+    padding: 200px 0 200px 100px;
+    background: url(../images/task1_7/bg.png);
+    background-size: 100% 100%;
+    position: relative;
+}
+
+header>section h2{
+     font-size: 50px;
+     color: #fff;
+     font-weight: 400;
+     margin-bottom: 10px;
+}
+
+header>section p{
+    font-size: 18px;
+    color: #fff;
+}
+header button{
+    width: 25%;
+    height: 50px;
+    background-color: #e8504f;
+    border:0;
+    color: #fff;
+    font-size: 24px;
+    font-family: "Microsoft YaHei" ,"sans-serif";
+    letter-spacing: 2px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+header button:hover{
+    background-color: #ff5857;
+}
+#introduce{
+    display: flex;
+    justify-content: space-between;
+}
+#introduce figure{
+    position: relative;
+    flex-basis: 25%;
+    text-align: center;
+    padding-bottom: 40px;
+}
+#introduce img{
+    width: 30px;
+    margin: 30px;
+}
+#introduce figcaption{
+    color: #717171;
+    font-size: 14px;
+    padding: 0 20%;
+}
+#introduce figure:after{
+    content: " ";
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    border:1px solid #999999;
+    border-top:45px solid #999999;
+}
+#remove:after{
+    display: none;
+}
+#activity header{
+    padding: 80px 0;
+    text-align: center;
+    background-color: #ededed;
+}
+#activity header img{
+    width: 70px;
+    margin-bottom: 20px;
+}
+#activity header p{
+    font-size: 40px;
+    color: #a9a9a9;
+}
+#activity>section{
+    background: url(../images/task1_7/map.png) no-repeat;
+    background-size: 100% 100%;
+    padding: 3% 8% 10%;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+#activity>section h2{
+    font-size: 18px;
+}
+#activity>section hr{
+    width: 30px;
+    height: 2px;
+    border: 0;
+    background-color: #fff;
+    transition: width 0.4s ease-in-out;
+    margin-bottom: 15px;
+}
+#activity>section hr:hover{
+    width: 200px;
+}
+#activity>section p{
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+#form{
+    display: flex;
+    justify-content:space-between ;
+}
+#form button{
+    font-family: "Microsoft YaHei" , "sans-serif";
+    width: 220px;
+    height: 30px;
+    color: #fff;
+    background-color: #bf4e48;
+    font-size: 14px;
+    border:0;
+    font-weight: 400;
+    letter-spacing: 20px;
+    padding-left: 30px;
+}
+#form ul{
+    height: 32px;
+    display: inline-block;
+    list-style: none;
+    border:0;
+}
+#form li{
+    visibility: hidden;
+}
+#form ul:hover li{
+    visibility: visible;
+}
+#form a{
+    display: inline-block;
+    width: 215px;
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    color:#717171;
+    font-size: 12px;
+    text-align: left;
+    padding-left: 5px;
+    background-color: #dae1e3; ;
+}
+
+#form a:hover{
+    background-color: #bf4e48;
+    color: #fff;
+}
+#form a:hover span{
+    visibility: visible;
+}
+
+#form li:first-child{
+    position: relative;
+    visibility: visible;
+}
+#form li:first-child:after{
+    content: url(../images/task1_7/arrow1.png);
+    position: absolute;
+    top:7px;
+    right: 10px;
+    height: 15px;
+    line-height: 15px;
+    display: inline-block;
+    padding: 0 2px;
+    background-color: #bf4e48;
+}
+#form li:first-child a{
+    width: 208px;
+    height: 28px;
+    border:1px solid #fff;
+    color: #999999;
+    padding-left: 10px;
+    background-color: #fff;
+}
+#form li:first-child a:hover{
+    border:1px solid #bf4e48;
+}
+
+#form span{
+    display: inline-block;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 900;
+    height: 15px;
+    margin-right: 8px;
+    visibility: hidden;
+}
+#activity>div{
+    padding: 6% 10%;
+    display: flex;
+    justify-content: space-between;
+}
+#activity figure{
+    text-align: center;
+    height: 350px;
+}
+#activity figure img{
+    width: 180px;
+    padding: 12px 8px;
+    border:1px solid #ccc;
+}
+#activity figure img:hover{
+    width: 195px;
+}
+#activity figcaption{
+    font-size: 14px;
+    margin: 3px 0 6px;
+}
+#activity figure p{
+    color: #717171;
+    font-size: 12px;
+}
+#activity figure:nth-child(2) figcaption{
+    margin: -6px 0;
+    font-size: 20px;
+    letter-spacing: 26px;
+    padding-left: 13px;
+}
+#activity figure:nth-child(2) p{
+    margin: 6px 0;
+}
+
+#world>section{
+    display: inline-block;
+    width: 66%;
+    height: 530px;
+    text-align: center;
+    color: #fff;
+    float: left;
+    background: url(../images/task1_7/new.png);
+    background-size: 100% 530px;
+}
+#world>section h3{
+     margin: 100px 0 10px;
+     font-size: 44px;
+     height: 20px;
+     font-weight: 400;
+ }
+#world>section h4{
+     margin: 0 0 50px;
+     height: 150px;
+     font-size: 150px;
+     font-weight: 400;
+ }
+#world>section address{
+    font-style: normal;
+    font-size: 22px;
+}
+#world>section time{
+    font-size: 22px;
+    margin-left: -40px;
+}
+#new{
+    display: inline-block;
+    width: 34%;
+    height:530px;
+    position: relative;
+}
+#new:before{
+    content: " ";
+    position: absolute;
+    border:18px solid transparent;
+    border-right:28px solid #fff;
+    top: 50%;
+    left: -40px;
+}
+#new section{
+    height: 50%;
+    padding: 25% 15%;
+    text-align: center;
+}
+#new section:nth-child(2),#new section:nth-child(3){
+    display: none;
+}
+#new h3{
+    font-size: 18px;
+    color: #555;
+    font-weight: 500;
+    padding:20px 0;
+}
+#new span{
+    color: #e6514a;
+}
+#new p{
+    line-height: 30px;
+    font-size: 12px;
+    color: #bcbcbc;
+    text-align: left;
+    margin-bottom: 40px;
+}
+#new button{
+    height: 30px;
+    width: 90px;
+    border:1px solid #e6514a;
+    background-color: #fff;
+    color: #bf4e48;
+    font-size: 12px;
+    font-weight: 900;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+#new button:hover{
+    background-color: #bf4e48;
+    color:#fff;
+}
+#page{
+    position: absolute;
+    display: flex;
+    top:380px;
+    left: 43%;
+    width: 14%;
+    justify-content: space-between;
+}
+#page div{
+    width: 10px;
+    height: 10px;
+    border:1px solid #ccc;
+    border-radius: 50%;
+    margin:0 5px;
+}
+#page div{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+}
+#page div:nth-child(1){
+    background-color: #999;
+}
+
+#time{
+    position: relative;
+    height: 500px;
+
+}
+#time section{
+    float: left;
+    position: relative;
+}
+#time section:nth-child(1){
+    width: 34%;
+    height: 500px;
+    text-align: center;
+    color: #fff;
+    background-color: #e64e4c;
+}
+#time section h3{
+    margin: 180px 0 8px;
+    font-size: 20px;
+    font-weight: normal;
+}
+#time section h4{
+    font-size: 20px;
+    font-weight: normal;
+}
+#time section hr{
+    background-color: #fff;
+    width: 30px;
+    height: 2px;
+    border:0;
+    transition: width 0.4s ease-in-out;
+    margin:20px auto;
+}
+#time section hr:hover{
+   width:160px;
+}
+#time button{
+    font-family: "Microsoft YaHei" , "sans-serif";
+    width: 156px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 400;
+    color:#fff;
+    background-color: #e64e4c;
+    border:1px solid #fff;
+}
+
+#time button:hover{
+    width: 156px;
+    height: 45px;
+    color:#e64e4c;
+    background-color: #fff;
+    border:1px solid #fff;
+}
+#time section:nth-child(2) button{
+    color:#e64e4c;
+    background-color: #fff;
+    border:1px solid #e64e4c;
+}
+#time section:nth-child(2) button:hover{
+    color:#fff;
+    background-color: #e64e4c;
+    border:1px solid #e64e4c;
+}
+#time section:nth-child(2){
+    width: 32%;
+    height: 450px;
+    display: inline-block;
+    text-align: center;
+}
+#time section:nth-child(3){
+    width: 34%;
+    overflow: hidden;
+}
+#time section:nth-child(3):before{
+    content: " ";
+    position: absolute;
+    border:18px solid transparent;
+    border-left:28px solid #fff;
+    top: 50%;
+}
+#voluntary{
+    padding: 6% 10%;
+    text-align: center;
+    overflow: hidden;
+}
+#voluntary h2{
+    font-size: 18px;
+    font-weight: 400;
+}
+#voluntary hr{
+    background-color: #e64e4c;
+    width: 30px;
+    height: 2px;
+    border:0;
+    transition: width 0.4s ease-in-out;
+}
+#voluntary hr:hover{
+    width: 150px;
+}
+#voluntary>section p{
+   font-size: 12px;
+    color: #666;
+}
+#voluntary>section p:last-child{
+    margin-bottom: 80px;
+}
+#clause{
+    width: 30%;
+    float: left;
+    text-align: left;
+    height: 260px;
+}
+#clause h3{
+    font-size: 14px;
+    color: #666;
+    margin-bottom:20px;
+    clear: right;
+}
+#clause p{
+    font-size: 12px;
+    color: #999;
+    line-height: 1.5em;
+}
+#clause a{
+    font-size: 12px;
+    float: right;
+    display: block;
+    cursor: pointer;
+    color: #666;
+}
+#con-form{
+    width: 64%;
+    float: right;
+    height: 260px;
+    text-align: left;
+}
+#con-form input{
+    width: 45%;
+    height: 35px;
+    margin: 0 0 12px;
+    background-color: #ededef;
+    border: 0;
+    padding:0 2%;
+    float: left;
+    font-size: 12px;
+    font-weight: 900;
+}
+#con-form input:nth-child(2),#con-form input:nth-child(6){
+    margin-right: 2%;
+}
+#con-form textarea{
+    width: 96%;
+    height: 85px;
+    padding: 5px 2%;
+    background-color: #ededef;
+    border: 0;
+    font-size: 12px;
+    line-height: 1.5em;
+    margin-bottom: 12px;
+    font-weight: 900;
+}
+#con-form button{
+    width: 100%;
+    height: 35px;
+    background-color: #ededef;
+    border: 0;
+    color: #999999;
+    font-weight: 900;
+    cursor: pointer;
+}
+#about{
+    clear: left;
+}
+#about{
+    background-color: #33363f;
+    text-align: center;
+    padding: 6% 10%;
+    color: #fff;
+}
+#about h2{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+#about p{
+    font-size: 12px;
+}
+#about p:nth-child(3){
+    margin-bottom: 30px;
+}
+#about input[type="email"]{
+    width: 36%;
+    height: 33px;
+    padding:  0 5px;
+}
+#about input[type="submit"]{
+    width: 8%;
+    text-align: center;
+    height: 37px;
+    padding-left: 10px;
+    border: 0;
+    background-color: #717179;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 10px;
+}
+#about ul{
+    margin: 30px 0 50px;
+    list-style: none;
+    height: 30px;
+}
+#about li{
+    display: inline-block;
+}
+#about a{
+    display: inline-block;;
+    padding:0 10px;
+}
+#about a img{
+    width: 20px;
+    transition: width 0.3s ease-in-out;
+}
+#about a:hover img{
+    width: 25px;
+}
+footer{;
+    height: 30px;
+    background-color: #30303a;
+    color: #fff;
+    padding: 25px 70px 0;
+    font-size: 10px;
+}
+footer span{
+    float: left;
+}
+footer a{
+    float: right;
+    text-decoration: none;
+    color: #fff;
+}

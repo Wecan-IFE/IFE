@@ -1,0 +1,65 @@
+
+body{
+    margin:0;
+    padding: 20px;
+}
+#container,#left,#inner,#right{
+    border: 1px solid #999;
+}
+#left,#inner,#right{
+    background-color: #fff;
+}
+
+#container{
+    background-color: #eee;
+    padding-bottom: 20px;
+    height: 100%;
+    overflow: hidden;
+}
+img{
+    width: 80px;
+    height: 80px;
+}
+#left img{
+    vertical-align: top;
+    margin-right: 20px;
+}
+#left span{
+    font-size: 25px;
+}
+/*三栏式布局*/
+#main{
+    float: left;
+    width: 100%;
+}
+#left{
+    width: 200px;
+    float: left;
+    /*将左元素浮动到main元素的最左边*/
+    margin-left:-100%;
+    /*方便理解，这里margin分开写，确保底部的20边距*/
+    margin-bottom: 20px;
+    /*确定其上边距和左边距，不用margin控制，一方面是结构清晰，另一方面是因为margin-left要浮动100%的距离和具体的值在css中不好相加运算*/
+    position: relative;
+    left: 20px;
+    top:20px;
+}
+#right{
+    padding: 20px;
+    width: 80px;
+    float: left;
+    /*将右元素浮动到main元素的最右边，这个值是有来历的需要思考*/
+    margin-left:-124px;
+    /*方便理解，这里margin分开写，确保底部的20边距*/
+    margin-bottom: 20px;
+    /*确定其上边距和右边距，不用margin控制，是为了结构清晰*/
+    position: relative;
+    right: 20px;
+    top:20px;
+
+}
+#inner{
+    margin:20px 163px 0 243px;
+    padding: 20px;
+    word-break: break-all;
+}
