@@ -14,7 +14,7 @@ this.good.addEventListener("mousedown",function(event){
 	that.y=event.clientY-that.con.offsetTop;
 	that.flag=1; 
 });
-addEventListener("mousemove",function(event) {
+this.good.addEventListener("mousemove",function(event) {
 	 if(that.flag==1){
 		var out1=event.clientX-that.x;
 		var out2=event.clientY-that.y;
@@ -34,12 +34,12 @@ addEventListener("mousemove",function(event) {
          that.con.style.top=out2+"px";
     }
 });
-addEventListener("mouseup",function(event){
+this.good.addEventListener("mouseup",function(event){
 	that.flag=0;
 });
 }
-new drag("craftInfo","craftInfo-title");
-new drag("power","power-title");
 new drag("control","control-title");
 new drag("console","console-title");
+new drag("power","power-title");
+new drag("craftInfo","craftInfo-title");
 

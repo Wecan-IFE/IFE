@@ -22,7 +22,7 @@ body{
 	-webkit-animation-play-state:paused;
 }
 .rotate{
-	animation: rotate 10s linear infinite;
+	animation: rotate 5s linear infinite;
 }
 @keyframes rotate
 {
@@ -119,7 +119,7 @@ to {transform:rotate(360deg);}
 	z-index: 10;
 }
 /*控制台，指挥官信号*/
-#control-title,#console-title{
+#control-title,#console-title,#power-title,#craftInfo-title{
     color: white;
     background-color: #DD7B3B;
     box-sizing: border-box;
@@ -137,23 +137,55 @@ to {transform:rotate(360deg);}
 .info{
 	color: #31708f;
 }
-#control,#console{
+#control,#console,#power,#craftInfo{
     background-color: rgba(150, 150, 150, 0.35);
     width: 500px;
-    position: absolute;
+    position: fixed;
     z-index: 101;
     border-radius: 4px;
 }
-#control-main,#console-main{
+#control{
+	left:20px;
+	top:20px;
+}
+#console{
+	right: 20px;
+	top:20px;
+}
+#craftInfo{
+	right:20px;
+	top:50%;
+}
+#power{
+	left: 20px;
+	top:50%;
+}
+#control-main,#console-main,#power-main,#craftInfo-main{
     color: white;
     width: 500px;
     padding: 10px;
     box-sizing: border-box;
+    height:300px;
 }
 #console-main{
-	height:300px;
 	overflow-y: scroll;
 	overflow-x: hidden;
+}
+#power-main div li{
+	list-style-type: none;
+}
+table{
+	width: 475px;
+	margin: 0 auto;
+	color:#fff;
+	font-size: 20px;
+	border-collapse: collapse;
+	text-align: center;
+}
+table td{
+	padding: 3px;
+	border: 1px solid #ccc;
+	color:#fff;
 }
 /*控制台*/
 .control button{
