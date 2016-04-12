@@ -1,45 +1,150 @@
 // 操作面板拖动
-// 指挥官信号面板拖动
-//性能面板拖动
-// 飞船状态面板拖动
-function drag(id,title){
-this.good=document.getElementById(title);
-this.con=document.getElementById(id);
-this.x=0;
-this.y=0;
-this.flag=0;
-var that=this;
-this.good.addEventListener("mousedown",function(event){
-	that.x=event.clientX-that.con.offsetLeft;
-	that.y=event.clientY-that.con.offsetTop;
-	that.flag=1; 
+function controldrag(){
+var good=document.getElementById("control-title");
+var con=document.getElementById("control");
+var x=0;
+var y=0;
+var flag=0;
+good.addEventListener("mousedown",function(event){
+	x=event.clientX-con.offsetLeft;
+	y=event.clientY-con.offsetTop;
+	flag=1; 
 });
-this.good.addEventListener("mousemove",function(event) {
-	 if(that.flag==1){
-		var out1=event.clientX-that.x;
-		var out2=event.clientY-that.y;
-		if(out1 > window.innerWidth - that.con.offsetWidth) {
-		    out1 = window.innerWidth - that.con.offsetWidth;
+addEventListener("mousemove",function(event) {
+	 if(flag==1){
+		var out1=event.clientX-x;
+		var out2=event.clientY-y;
+		if(out1 > window.innerWidth - con.offsetWidth) {
+		    out1 = window.innerWidth -con.offsetWidth;
 		}
 		if(out1 < 0) {
 		    out1 = 0;
 		}
-		if(out2 > window.innerHeight - that.con.offsetHeight) {
-		    out2 = window.innerHeight - that.con.offsetHeight;
+		if(out2 > window.innerHeight - con.offsetHeight) {
+		    out2 = window.innerHeight - con.offsetHeight;
 		}
 		if(out2 < 0) {
 		    out2 = 0;
 		}
-         that.con.style.left=out1+"px";
-         that.con.style.top=out2+"px";
+         con.style.left=out1+"px";
+         con.style.top=out2+"px";
     }
 });
-this.good.addEventListener("mouseup",function(event){
-	that.flag=0;
+addEventListener("mouseup",function(event){
+	flag=0;
 });
 }
-new drag("control","control-title");
-new drag("console","console-title");
-new drag("power","power-title");
-new drag("craftInfo","craftInfo-title");
+// 指挥官信号面板拖动
+function consoledrag(){
+var good=document.getElementById("console-title");
+var con=document.getElementById("console");
+var x=0;
+var y=0;
+var flag=0;
+good.addEventListener("mousedown",function(event){
+	x=event.clientX-con.offsetLeft;
+	y=event.clientY-con.offsetTop;
+	flag=1; 
+});
+addEventListener("mousemove",function(event) {
+	 if(flag==1){
+		var out1=event.clientX-x;
+		var out2=event.clientY-y;
+		if(out1 > window.innerWidth - con.offsetWidth) {
+		    out1 = window.innerWidth -con.offsetWidth;
+		}
+		if(out1 < 0) {
+		    out1 = 0;
+		}
+		if(out2 > window.innerHeight - con.offsetHeight) {
+		    out2 = window.innerHeight - con.offsetHeight;
+		}
+		if(out2 < 0) {
+		    out2 = 0;
+		}
+         con.style.left=out1+"px";
+         con.style.top=out2+"px";
+    }
+});
+addEventListener("mouseup",function(event){
+	flag=0;
+});
+}
+//性能面板拖动
+function powerdrag(){
+var good=document.getElementById("power-title");
+var con=document.getElementById("power");
+var x=0;
+var y=0;
+var flag=0;
+good.addEventListener("mousedown",function(event){
+	x=event.clientX-con.offsetLeft;
+	y=event.clientY-con.offsetTop;
+	flag=1; 
+});
+addEventListener("mousemove",function(event) {
+	 if(flag==1){
+		var out1=event.clientX-x;
+		var out2=event.clientY-y;
+		if(out1 > window.innerWidth - con.offsetWidth) {
+		    out1 = window.innerWidth -con.offsetWidth;
+		}
+		if(out1 < 0) {
+		    out1 = 0;
+		}
+		if(out2 > window.innerHeight - con.offsetHeight) {
+		    out2 = window.innerHeight - con.offsetHeight;
+		}
+		if(out2 < 0) {
+		    out2 = 0;
+		}
+         con.style.left=out1+"px";
+         con.style.top=out2+"px";
+    }
+});
+addEventListener("mouseup",function(event){
+	flag=0;
+});
+}
+// 飞船状态面板拖动
+function craftInfodrag(){
+var good=document.getElementById("craftInfo-title");
+var con=document.getElementById("craftInfo");
+var x=0;
+var y=0;
+var flag=0;
+good.addEventListener("mousedown",function(event){
+	x=event.clientX-con.offsetLeft;
+	y=event.clientY-con.offsetTop;
+	flag=1; 
+});
+addEventListener("mousemove",function(event) {
+	 if(flag==1){
+		var out1=event.clientX-x;
+		var out2=event.clientY-y;
+		if(out1 > window.innerWidth - con.offsetWidth) {
+		    out1 = window.innerWidth -con.offsetWidth;
+		}
+		if(out1 < 0) {
+		    out1 = 0;
+		}
+		if(out2 > window.innerHeight - con.offsetHeight) {
+		    out2 = window.innerHeight - con.offsetHeight;
+		}
+		if(out2 < 0) {
+		    out2 = 0;
+		}
+         con.style.left=out1+"px";
+         con.style.top=out2+"px";
+    }
+});
+addEventListener("mouseup",function(event){
+	flag=0;
+});
+}
+powerdrag();
+controldrag();
+consoledrag();
+craftInfodrag();
+
 
