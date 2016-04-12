@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles/task1_2.css">
     <title>task_1</title>
 </head>
 <body>
 <header>
-    <h1>百度前端技术学院首次任务</h1>
+    <h1>IFE WeCan</h1>
 
     <nav>
         <ul>
@@ -30,8 +31,9 @@
 
         <p>从任务一开始，每次任务都基本符合语义化的规范，并且不断地深入了解语义化，对每一个任务都用心去做</p>
 
-        <p>今天学习了header、section、footer、article、address、time等元素的使用，<a href="http://www.w3school.com.cn/tags/index.asp">w3school是我经常查阅的文档</a>大家有什么好的资源欢迎共享，这种<b>分享式
-            的学习方</b>式可以让我们很快成长。</p>
+        <p>今天学习了header、section、footer、article、address、time、mark、figure、figcaption等元素的使用，<a
+                href="http://www.w3school.com.cn/tags/index.asp">w3school是我经常查阅的文档</a>大家有什么好的资源欢迎共享，这种<b>分享式的学习方式</b>可以让我们很快成长。
+        </p>
         <img src="images/semantization.jpg">
 
         <p>nav元素定义导航链接的部分，address元素定义联系方式，time元素很显然，就是用于定义时间了。吐槽一下，任务一中的换行了几个字，是否真的需要换行元素，p元素本身就是块级元素，
@@ -39,7 +41,7 @@
 
         <p>比较容易混淆的是article、section和div，article侧重于表现独立、完整的内容，section侧重于分块，<b>并且需要包含标题</b>，div侧重于当设置样式的容器，
             <a href="http://www.yiiyaa.net/?p=1457" target="_blank">这篇文章讲的很好。</a>
-            html5的其他元素，极大地丰富了文档的内容，可以参考w3school和其他文档的相关介绍，如果了解了浏览器如何应用语义化使搜索更高效，将会对语义化的理解更加深入。
+            html5的其他元素，极大地丰富了文档的内容，可以参考w3school和其他文档的相关介绍。可以先不必考虑结构元素给文档带来的样式效果，如h1作为主标题，虽然不需要很大的字，这一点可以用css来调整，不需要换成别的h元素。如果了解了浏览器如何应用语义化使搜索更高效，将会对语义化的理解更加深入。
         </p>
     </article>
     <article id="second">
@@ -59,11 +61,14 @@
             比如说 JPG, GIF, PNG，有时间就学学<b>ps</b>,顺便写一篇女神养成记--我的ps之路。
         </p>
         <img src="images/jpg.jpg">
-        <ol>
+        <ul>
             <li>了解图片格式</li>
             <li>应用图片格式</li>
             <li>p图大神</li>
-        </ol>
+        </ul>
+    </article>
+    <section>
+        <h2>图片</h2>
         <figure>
             <figcaption>GIF采用无损压缩，支持透明度和动画，缺点是色彩偏少，图像质量差,发现保存gif格式的图片会转换为其格式，需要下载才可以(132 KB)</figcaption>
             <img src="images/gif.gif">
@@ -104,11 +109,11 @@
             <figcaption>一张好看的图片</figcaption>
             <img src="images/resizeApi6.png">
         </figure>
-    </article>
+    </section>
     <article id="third">
-        <h1>浏览器兼容性</h1>
+        <h2>浏览器兼容性</h2>
 
-        <h2>很熟悉，因为都在说，很陌生，因为从来没有实现过，从今天起，征服它</h2>
+        <h3>很熟悉，因为都在说，很陌生，因为从来没有实现过，从今天起，征服它</h3>
         <address>
             <span>geekhac</span>
             <time>2015-03-15</time>
@@ -118,7 +123,7 @@
             <li>firefox</li>
             <li>IE</li>
         </ol>
-        <table border="1">
+        <table>
             <thead>
             <tr>
                 <th>浏览器兼容问题</th>
@@ -156,40 +161,51 @@
             </tfoot>
         </table>
     </article>
+    <aside id="aside">
+        <h3>快来注册吧，我们一起coding</h3>
+
+        <form>
+            <div class="wrap">
+                <label for="email">请输入邮箱地址</label>
+                <input type="email" name="email" id="email" placeholder="这是一个文本输入框">
+                <mark>请输入标准的邮箱格式</mark>
+            </div>
+            <div class="wrap">
+                <label for="password">请输入密码</label>
+                <input type="password" name="password" id="password" placeholder="这是一个文本输入框">
+            </div>
+            <div class="wrap">
+                <label for="re-password">请重复输入密码</label>
+                <input type="password" name="re-password" id="re-password" placeholder="这是一个文本输入框">
+                <mark>密码请为6-18位英文数字</mark>
+            </div>
+            <div class="wrap">
+                <label>性别</label>
+                <input type="radio" name="sex" id="male" value="male" checked><label for="male">男</label>
+                <input type="radio" name="sex" id="female" value="female"><label for="female">女</label>
+            </div>
+            <div class="wrap">
+                <label for="city">城市</label>
+                <select id="city">
+                    <option value="beijing">北京</option>
+                    <option value="xian">西安</option>
+                    <option value="hangzhou">杭州</option>
+                </select>
+            </div>
+            <div class="wrap">
+                <label>爱好</label>
+                <input type="checkbox" name="hobby" value="sport" id="sport"><label for="sport">运动</label>
+                <input type="checkbox" name="hobby" value="art" id="art"><label for="art">艺术</label>
+                <input type="checkbox" name="hobby" value="science" id="science"><label for="science">科学</label>
+            </div>
+            <div class="wrap">
+                <label for="introduction">个人描述</label>
+                <textarea id="introduction" placeholder="这是一个多行输入框，输入您的个人描述"></textarea>
+            </div>
+            <input type="submit" value="确认提交">
+        </form>
+    </aside>
 </div>
-<aside id="aside">
-    <h2>快来注册吧，我们一起coding</h2>
-
-    <h3>验证信息</h3>
-
-    <form>
-        <label for="email">请输入邮箱地址：</label>
-        <input type="text" name="email" id="email" placeholder="这是一个文本输入框">
-
-        <mark>请输入标准的邮箱格式</mark>
-        <label for="password">请输入密码：</label>
-        <input type="text" name="password" id="password" placeholder="这是一个文本输入框">
-        <label for="re-password">请重复输入密码：</label>
-        <input type="text" name="re-password" id="re-password" placeholder="这是一个文本输入框">
-
-        <mark>密码请为6-18位英文数字</mark>
-        性别：<input type="radio" name="sex" id="male" value="male" checked><label for="male">男</label>
-        <input type="radio" name="sex" id="female" value="female"><label for="female">女</label>
-        <label for="city">城市：</label>
-        <select id="city">
-            <option value="beijing">北京</option>
-            <option value="xian">西安</option>
-            <option value="hangzhou">杭州</option>
-        </select>
-        爱好：
-        <input type="checkbox" name="hobby" value="sport" id="sport"><label for="sport">运动</label>
-        <input type="checkbox" name="hobby" value="art" id="art"><label for="art">艺术</label>
-        <input type="checkbox" name="hobby" value="science" id="science"><label for="science">科学</label>
-        <label for="introduction">个人描述：</label>
-        <textarea id="introduction" placeholder="这是一个多行输入框，输入您的个人描述"></textarea>
-        <input type="submit" value="确认提交">
-    </form>
-</aside>
 <footer>
     <span>版权所有&copy;</span>
 </footer>
