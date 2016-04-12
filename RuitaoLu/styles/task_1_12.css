@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+body {
+  font-family: sans-serif;
+}
+table th {
+  text-align: left;
+}
+table thead tr{
+  background: #000;
+  color: #fff;
+}
+table tbody tr:nth-child(1), table tbody tr:nth-child(2), table tbody tr:nth-child(3) {
+  color: #f00;
+}
+table tbody tr:nth-child(even) {
+  background: #eee;
+}
+input {
+  margin: 30px 0;
+  width: 100px;
+  outline: none;
+  transition: width 0.5s;
+  -webkit-transition: width 0.5s;
+  -o-transition: width 0.5s;
+}
+input:focus {
+  width: 200px;
+}
+.banner {
+  position: relative;
+  width: 300px;
+  height: 150px;
+  overflow: hidden;
+}
+.banner .warp {
+  position: relative;
+  left: 0;
+  width: 300%;
+  height: 100%;
+  transition: left 0.5s;
+  -webkit-transition: left 0.5s;
+  -o-transition: left 0.5s;
+  font-size: 0;
+}
+.banner .r, .banner .g, .banner .b {
+  display: inline-block;
+  width: 300px;
+  height: 100%;
+}
+.banner .r {
+  background: #f00;
+}
+.banner #r:target ~ .warp {
+  left: 0;
+}
+.banner .g {
+  background: #0f0;
+}
+.banner #g:target ~ .warp {
+  left: -100%;
+}
+.banner .b {
+  background: #00f;
+}
+.banner #b:target ~ .warp {
+  left: -200%;
+}
+.banner ul {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.banner ul li {
+  float: left;
+  margin-left: 5px;
+  width: 30px;
+  text-align: center;
+  line-height: 30px;
+  background: rgba(255, 255, 255, 0.5);
+}
+.banner ul li a {
+  color: #fff;
+}
+
+/*# sourceMappingURL=task_1_12.css.map */
