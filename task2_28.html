@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>task2_27</title>
+    <title>task2_28</title>
     <link rel="stylesheet" href="styles/task2_28.css">
 </head>
 <body>
@@ -24,7 +24,7 @@
     </div>
 </div>
 <div id="console">
-    <div id="console-title">指挥官信号</div>
+    <div id="console-title">指挥官信号接收</div>
     <div id="console-main">
         <p class="">准备就绪，随时准备起飞！</p>
     </div>
@@ -38,19 +38,19 @@
                 <li>
                     <label>
                         <input type="radio" name="power" value="1">
-                        前进号(速率30deg/s,能耗5%/s)
+                        <span>前进号</span>(速率30deg/s,能耗5%/s)
                     </label>
                 </li>
                 <li>
                     <label>
                         <input type="radio" name="power" value="2">
-                        奔腾号(速率50deg/s,能耗7%/s)
+                        <span>奔腾号</span>(速率50deg/s,能耗7%/s)
                     </label>
                 </li>
                 <li>
                     <label>
                         <input type="radio" name="power" value="3">
-                        超越号(速率80deg/s,能耗9%/s)
+                        <span>超越号</span>(速率80deg/s,能耗9%/s)
                     </label>
                 </li>
             </ul>
@@ -61,19 +61,19 @@
                 <li>
                     <label>
                         <input type="radio" name="energy" value="1">
-                        劲量型(补充能源速度2%/s)
+                        <span>劲量型</span>(补充能源速度2%/s)
                     </label>
                 </li>
                 <li>
                     <label>
                         <input type="radio" name="energy" value="2">
-                        光能型(补充能源速度3%/s)
+                        <span>光能型</span>(补充能源速度3%/s)
                     </label>
                 </li>
                 <li>
                     <label>
                         <input type="radio" name="energy" value="3">
-                        永久型(补充能源速度4%/s)
+                        <span>永久型</span>(补充能源速度4%/s)
                     </label>
                 </li>
             </ul>
@@ -93,6 +93,20 @@
 <div class="pathway"></div>
 <div class="pathway"></div>
 <div class="pathway"></div>
+<div id="craftInfo">
+    <div id="craftInfo-title">飞船状态面板</div>
+    <div id="craftInfo-main">
+        <table>
+            <thead>
+                <td>飞船</td>
+                <td>动力系统</td>
+                <td>能源系统</td>
+                <td>当前飞行状态</td>
+                <td>剩余能耗</td>
+            </thead>
+        </table>
+    </div>
+</div>
 </body>
 <script  type="text/javascript" src="scripts/drag.js"></script>
 <script  type="text/javascript" src="scripts/task2_28.js"></script>
