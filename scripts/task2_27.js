@@ -10,7 +10,7 @@ function initpathway(){
 	}
 }
 initpathway();
-//创建对象
+//创建对象（构造函数模式加原型模式）
 var body=document.getElementsByTagName("body")[0];
 function object(id,parentEle){
 	this.id=id;
@@ -34,7 +34,7 @@ object.prototype={
 		this.parentEle.appendChild(this.btnDestroy);
 		this.parentEle.appendChild(this.btnFly);
 		this.parentEle.appendChild(this.btnStop);
-	},
+	},//初始化按钮
 	createCraft:function(){
 		this.createCraftNew=document.getElementById("console-main");
 		if(document.getElementsByClassName('dirigible')[this.id]){
@@ -43,7 +43,7 @@ object.prototype={
 			p.className="warning";
 			this.createCraftNew.appendChild(p);
 			return false;
-		}
+		}//判断飞船是否在轨道中
 		var p=document.createElement("p");
 		if(Math.random()>0.1){
 			this.div_1=document.createElement("div");
@@ -75,7 +75,7 @@ object.prototype={
 			p.className="warning";
 			this.createCraftNew.appendChild(p);
 		}
-	},
+	},//创建飞船
 	destroyCraft:function(){
 		var p=document.createElement("p");
 		if(Math.random()>0.1){
@@ -88,7 +88,7 @@ object.prototype={
 			p.className="warning";
 			this.createCraftNew.appendChild(p);
 		}
-	},
+	},//摧毁飞船
 	power:function(){
 		var that=this;
 		var power=document.querySelectorAll(".powerSelect ul li label input");
@@ -106,7 +106,7 @@ object.prototype={
 				that.energyGrade=energy[i].value;
 			}
 		}
-	},
+	},//能源选中
 	flyCraft:function(){
 		var p=document.createElement("p");
 		if(Math.random()>0.1){
@@ -138,7 +138,7 @@ object.prototype={
 			p.className="warning";
 			this.createCraftNew.appendChild(p);
 		}
-	},
+	},//飞行
 	stopCraft:function(){
 		var p=document.createElement("p");
 		if(Math.random()>0.1){
@@ -167,7 +167,7 @@ object.prototype={
 			p.className="warning";
 			this.createCraftNew.appendChild(p);
 		}
-	},
+	},//飞船停止
 	initEvent:function(){
 		var that=this;
 		this.btnCreate.addEventListener("click",function(){

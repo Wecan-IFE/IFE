@@ -10,7 +10,7 @@ function initpathway(){
 	}
 }
 initpathway();
-//创建对象
+//创建对象（构造函数模式加原型模式）
 var body=document.getElementsByTagName("body")[0];
 function object(id,parentEle){
 	this.id=id;
@@ -34,7 +34,7 @@ object.prototype={
 		this.parentEle.appendChild(this.btnDestroy);
 		this.parentEle.appendChild(this.btnFly);
 		this.parentEle.appendChild(this.btnStop);
-	},
+	},	//初始化按钮
 	createCraft:function(){
 		this.createCraftNew=document.getElementById("console-main");
 		if(document.getElementsByClassName('dirigible')[this.id]){
@@ -43,7 +43,7 @@ object.prototype={
 			p.className="warning";
 			this.createCraftNew.appendChild(p);
 			return false;
-		}
+		}//判断飞船是否在轨道中
 		var p=document.createElement("p");
 		if(Math.random()>0.3){
 			this.div_1=document.createElement("div");
@@ -75,7 +75,7 @@ object.prototype={
 			p.className="warning";
 			this.createCraftNew.appendChild(p);
 		}
-	},
+	},//创建飞船
 	destroyCraft:function(){
 		var p=document.createElement("p");
 		if(Math.random()>0.3){
@@ -88,10 +88,10 @@ object.prototype={
 			p.className="warning";
 			this.createCraftNew.appendChild(p);
 		}
-	},
+	},//摧毁飞船
 	flyCraft:function(){
 		var p=document.createElement("p");
-		if(Math.random()>0.3){
+		if(Math.random()>0.3){//30%概率丢包
 			var that=this;
 			clearInterval(this.energyIncrease);
 			if (this.energyReduce) {
@@ -120,7 +120,7 @@ object.prototype={
 			this.createCraftNew.appendChild(p);
 		}
 
-	},
+	},//飞行
 	stopCraft:function(){
 		var p=document.createElement("p");
 		if(Math.random()>0.3){
@@ -149,7 +149,7 @@ object.prototype={
 			p.className="warning";
 			this.createCraftNew.appendChild(p);
 		}
-	},
+	},//飞船停止
 	initEvent:function(){
 		var that=this;
 		this.btnCreate.addEventListener("click",function(){
@@ -165,7 +165,7 @@ object.prototype={
 			that.stopCraft();
 		})
 	}
-}
+}//初始化事件
 var init=document.querySelectorAll(".control");
 for(var i=0;i<init.length;i++){
 	new object(i,init[i]);
@@ -173,5 +173,5 @@ for(var i=0;i<init.length;i++){
 function scroll(){
 	var scroll=document.getElementById("console-main");
 	scroll.scrollTop=scroll.scrollHeight;
-}
+}//控制台滚动条自动下拉
 setInterval("scroll()",10)

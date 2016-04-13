@@ -142,9 +142,9 @@ addEventListener("mouseup",function(event){
 	flag=0;
 });
 }
-powerdrag();
 controldrag();
 consoledrag();
+powerdrag();
 craftInfodrag();
 
 

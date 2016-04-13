@@ -6,6 +6,19 @@ body{
 	-webkit-user-select:none;
 	user-select:none;   
 }
+header{
+	text-align: center;
+	font-size: 2em;
+	color: white;
+}
+footer{
+	position: fixed;
+	bottom: 0px;
+	width:100%;
+	text-align: center;
+	font-size: 1.5em;
+	color: white;
+}
 /*太阳和内部斑点*/
 .sun{
 	width:200px;
