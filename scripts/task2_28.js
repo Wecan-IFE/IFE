@@ -10,7 +10,7 @@ function initpathway(){
 	}
 }
 initpathway();
-//创建对象
+//创建对象（构造函数模式加原型模式）
 var body=document.getElementsByTagName("body")[0];
 function object(id,parentEle){
 	this.id=id;
@@ -34,7 +34,7 @@ object.prototype={
 		this.parentEle.appendChild(this.btnDestroy);
 		this.parentEle.appendChild(this.btnFly);
 		this.parentEle.appendChild(this.btnStop);
-	},
+	},//初始化按钮
 	createCraft:function(){
 		this.createCraftNew=document.getElementById("console-main");
 		if(document.getElementsByClassName('dirigible')[this.id]){
@@ -43,7 +43,7 @@ object.prototype={
 			p.className="warning";
 			this.createCraftNew.appendChild(p);
 			return false;
-		}
+		}//判断飞船是否在轨道中
 		var p=document.createElement("p");
 		if(Math.random()>0.1){
 			this.div_1=document.createElement("div");
@@ -77,7 +77,7 @@ object.prototype={
 			p.className="warning";
 			this.createCraftNew.appendChild(p);
 		}
-	},
+	},//创建飞船
 	destroyCraft:function(){
 		var p=document.createElement("p");
 		if(Math.random()>0.1){
@@ -91,7 +91,7 @@ object.prototype={
 			p.className="warning";
 			this.createCraftNew.appendChild(p);
 		}
-	},
+	},//摧毁飞船
 	power:function(){
 		var that=this;
 		var power=document.querySelectorAll(".powerSelect ul li label input");
@@ -113,7 +113,7 @@ object.prototype={
 				that.grade_2=grade_2[i].innerText;
 			}
 		}
-	},
+	},//飞船能源
 	createInfo:function(){
 		this.table=document.querySelector("#craftInfo-main table");
 		this.tr=document.createElement("tr");
@@ -136,7 +136,7 @@ object.prototype={
 		this.tr.appendChild(this.td_4);
 		this.tr.appendChild(this.td_5);
 		this.table.appendChild(this.tr);
-	},
+	},//初始化表格内容
 	flyCraft:function(){
 		var p=document.createElement("p");
 		if(Math.random()>0.1){
@@ -170,7 +170,7 @@ object.prototype={
 			p.className="warning";
 			this.createCraftNew.appendChild(p);
 		}
-	},
+	},//飞行
 	stopCraft:function(){
 		var p=document.createElement("p");
 		if(Math.random()>0.1){
@@ -219,8 +219,7 @@ object.prototype={
 			that.stopCraft();
 		})
 	}
-}
-//对象
+}//初始化事件
 var init=document.querySelectorAll(".control");
 for(var i=0;i<init.length;i++){
 	new object(i,init[i]);
