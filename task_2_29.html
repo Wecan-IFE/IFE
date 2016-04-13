@@ -23,21 +23,6 @@
 		var the_button = document.getElementById('validate');
 		var tip = document.getElementById('tip');
 		
-		// 字符总数计算
-		function count(value){
-			var countNum = 0;		
-			for(var i = 0;i < value.length;i++){
-				var countCode = value.charCodeAt(i);
-				if(countCode >= 0 && countCode <= 128){
-					countNum += 1;
-				}
-				else{
-					countNum += 2;
-				}
-			}
-			return countNum;
-		};
-
 		// 点击事件调用模块的验证名称方法
 		the_button.onclick = function(){
 			validate.name(input.value);
@@ -47,7 +32,23 @@
 		var validate = (function(){
 			// 名称验证
 			var name = function(inputValue){
+				// 字符总数计算
+				function count(value){
+					var countNum = 0;		
+					for(var i = 0;i < value.length;i++){
+						var countCode = value.charCodeAt(i);
+						if(countCode >= 0 && countCode <= 128){
+							countNum += 1;
+						}
+						else{
+							countNum += 2;
+						}
+					}
+					return countNum;
+				};
+
 				var num = count(inputValue);
+
 				if(num == 0){
 					tip.innerHTML = "姓名不能为空";
 					tip.style.color = "#f00";
@@ -64,6 +65,7 @@
 					input.style.border = "1px solid #f00";
 				}
 			};
+
 			return {
 				name: name
 			}	
