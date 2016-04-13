@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>task_2_29</title>
+	<style>
+		*{margin:0;padding:0;}
+		body{padding:200px;min-width: 600px;}
+		label{margin-right:20px;font-size:25px;vertical-align:middle;}
+		#typeIn{padding-left:15px;width:400px;height:60px;font-size:20px;border:1px solid #eee;border-radius:5px;outline:none;}
+		button{width:100px;height:60px;font-size:20px;border-radius:5px;border:1px solid #276CA7;color:#fff;background:#2F79BA;cursor:pointer;}
+		#tip{display:block;margin-left:75px;font-size:20px;color:#aaa;}
+	</style>
+</head>
+<body>
+	<label for="typeIn">名称</label>
+	<input type="text" id="typeIn">
+	<button id="validate">验证</button>
+	<span id="tip">必填，长度为4~16个字符</span>
+
+	<script>
+		var input = document.getElementById('typeIn');
+		var the_button = document.getElementById('validate');
+		var tip = document.getElementById('tip');
+		
+		// 字符总数计算
+		function count(value){
+			var countNum = 0;		
+			for(var i = 0;i < value.length;i++){
+				var countCode = value.charCodeAt(i);
+				if(countCode >= 0 && countCode <= 128){
+					countNum += 1;
+				}
+				else{
+					countNum += 2;
+				}
+			}
+			return countNum;
+		};
+
+		// 点击事件调用模块的验证名称方法
+		the_button.onclick = function(){
+			validate.name(input.value);
+		}
+
+		// 验证模块
+		var validate = (function(){
+			// 名称验证
+			var name = function(inputValue){
+				var num = count(inputValue);
+				if(num == 0){
+					tip.innerHTML = "姓名不能为空";
+					tip.style.color = "#f00";
+					input.style.border = "1px solid #f00";
+				}
+				else if(num >= 4 && num <= 16){
+					tip.innerHTML = "格式正确";
+					tip.style.color = "#0f0";
+					input.style.border = "1px solid #0f0";
+				}
+				else{
+					tip.innerHTML = "字符长度为4~16";
+					tip.style.color = "#f00";
+					input.style.border = "1px solid #f00";
+				}
+			};
+			return {
+				name: name
+			}	
+		}());
+
+	</script>
+</body>
+</html>
