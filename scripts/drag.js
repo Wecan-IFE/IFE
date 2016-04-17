@@ -26,8 +26,8 @@ addEventListener("mousemove",function(event) {
 		if(out2 < 0) {
 		    out2 = 0;
 		}
-         con.style.left=out1+"px";
-         con.style.top=out2+"px";
+        con.style.left=out1+"px";
+        con.style.top=out2+"px";
     }
 });
 addEventListener("mouseup",function(event){
