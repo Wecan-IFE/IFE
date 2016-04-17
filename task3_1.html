@@ -27,7 +27,7 @@
 			</article>
 			<footer>
 			<!-- 弹出框底部提交按钮 -->
-				<button id="confirm" class="btn">确定</button>
+				<button id="confirm" onclick="callback()" class="btn">确定</button>
 				<button id="cancel" class="btn">取消</button>
 			</footer>
 			<div id="right"></div>
@@ -71,4 +71,9 @@
 <div>滚动测试</div>
 </body>
 <script src="scripts/task3_1.js"></script>
+<script>
+	function callback(){
+		callBack.popUp("回调函数");
+	}
+</script>
 </html>

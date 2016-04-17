@@ -3,7 +3,13 @@ var alert_container=document.querySelector("#alert-container");
 var cancel=document.querySelector("#alert header button");
 var abolish=document.querySelector("#cancel");
 var confirm=document.getElementById("confirm");
-var article=document.querySelector("#alert article")
+var article=document.querySelector("#alert article");
+var callBack={
+	popUp:function(txt){
+		this.article=document.querySelector("#alert article");
+		this.article.innerHTML=txt;
+	}
+}
 function Pop(element,data,color){
 	this.element=element;
 	this.data=data;
@@ -78,6 +84,7 @@ Pop.prototype={
 		});
 	},//模式匹配
 	style:function(){
+		this.alert_header.getElementsByTagName("span")[0].innerText=this.element.innerHTML;
 		this.alert_footer.style.backgroundColor=this.color;
 		this.alert_header.style.backgroundColor=this.color;
 		cancel.style.backgroundColor=this.color;
@@ -148,9 +155,9 @@ Pop.prototype={
 		　　	window.event.cancelBubble=true;
 		}
 	}
-}//给按钮创建对象
+}
+//给按钮创建对象
 for(i in btn){
 	var color=window.getComputedStyle(btn[i],null).getPropertyValue("background-color");
 	new Pop(btn[i],btn[i].getAttribute("data"),color);
 }
-
