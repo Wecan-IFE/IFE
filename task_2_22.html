@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>task_2_22</title>
+    <style>
+        body{
+            margin:0;
+            padding: 0;
+        }
+        div{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            border: solid;
+            padding: 20px 30px;
+            margin: 10px 30px;
+            background-color: #ffffff; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="root">
+        <div>
+            <div>
+                <div> </div>
+                <div> </div>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <div> </div>
+                <div> </div>
+            </div>
+        </div>
+    </div>
+    <p>
+        <button onclick="pre()">前序遍历</button>
+    </p>
+</body>
+
+<script type="text/javascript">
+divList = [];
+function pre() {
+    reset();
+    root = document.getElementsByClassName('root');
+    preOrder(root[0]);
+    changeColor();
+}
+
+function preOrder(node) {
+    if (!(node == null)) {
+        divList.push(node);
+        preOrder(node.firstElementChild);
+        preOrder(node.lastElementChild);
+    }
+}
+
+function changeColor() {
+    var i = 0;
+    divList[i++].style.backgroundColor = 'blue'
+    var timer = setInterval(function () {
+        if (i < divList.length) {
+            divList[i-1].style.backgroundColor = '#fff';
+            divList[i++].style.backgroundColor = 'blue';
+        } else {
+            clearInterval(timer);
+            divList[divList.length-1].style.backgroundColor = '#fff';
+        }
+    },1000)
+}
+
+function reset() {
+    divList = [];
+    var alldiv = document.getElementsByTagName('div');
+    for (var i = 0; i < alldiv.length; i++) {
+        alldiv[i].style.backgroundColor = '#fff';
+    }
+}
+    </script>
+</body>
+</html>
