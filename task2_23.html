@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>听命令的小方块三</title>
+    <link rel="stylesheet" type="text/css" href="styles/task2_23.css">
+    <script src="scripts/task2_23.js"></script>
+</head>
+<body>
+<ul id="row">
+    <li></li>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+</ul>
+<ul id="column">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+</ul>
+<div id="table">
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</div>
+<ul>命令集：
+    <li>GO：向蓝色边所面向的方向前进一格</li>
+    <li>TUN LEF：向左转（逆时针旋转90度）</li>
+    <li>TUN RIG：向右转（顺时针旋转90度）</li>
+    <li>TUN BAC：向右转（旋转180度）</li>
+    <li>TRA LEF：向屏幕的左侧移动一格，方向不变</li>
+    <li>TRA TOP：向屏幕的上面移动一格，方向不变</li>
+    <li>TRA RIG：向屏幕的右侧移动一格，方向不变</li>
+    <li>TRA BOT：向屏幕的下面移动一格，方向不变</li>
+    <li>MOV LEF：方向转向屏幕左侧，并向屏幕的左侧移动一格</li>
+    <li>MOV TOP：方向转向屏幕上面，向屏幕的上面移动一格</li>
+    <li>MOV RIG：方向转向屏幕右侧，向屏幕的右侧移动一格</li>
+    <li>MOV BOT：方向转向屏幕下面，向屏幕的下面移动一格</li>
+</ul>
+<form>
+    <button type="button" id="execute">执行</button>
+    <button type="button" id="refresh">refresh</button>
+    
+    <div id="cmd">
+        <ol id="lineNum">
+            <li></li>
+        
+        </ol> 
+        <label for="command"></label><textarea id="command" placeholder="请输入按钮中的命令" rows="10" cols="30"></textarea>
+    </div>
+   
+
+</form>
+</body>
+</html>
