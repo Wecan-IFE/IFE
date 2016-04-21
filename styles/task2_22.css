@@ -1,0 +1,57 @@
+#row,#column{
+    list-style: none;
+    padding:0;
+    margin:0;
+    font-family: "Microsoft YaHei" , "sans-serif";
+}
+#column{
+    clear: left;
+    float: left;
+    display: inline-block;
+}
+#row li{
+    float: left;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    line-height: 38px;
+}
+#column li{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 38px;
+}
+#table{
+    float: left;
+    position: relative;
+}
+table{
+    border-collapse: collapse;
+    border:1px solid #000;
+}
+td{
+    border:1px solid #b0b0b0;
+    display: inline-block;
+    padding:0;
+    width: 38px;
+    height: 38px;
+}
+
+#button{
+    clear: left;;
+    padding:20px 0;
+}
+#square{
+    width: 38px;
+    height: 28px;
+    background-color: #f00;
+    border-top: 10px solid #00f;
+    position:absolute;
+    transform: rotate(0deg);
+    -moz-transition: all 1s ease-in,top;
+    -webkit-transition: all 1s ease-in;
+    -o-transition: all 1s ease-in;
+    transition: all 1s ease-in;
+}
+
