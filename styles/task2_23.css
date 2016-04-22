@@ -55,14 +55,18 @@ form{
     position: absolute;
     height: 202px;
     background-color: #333;
+    width: 30px;
     overflow: hidden;
     color: #fff;
+    text-align: center;
 }
-#lineNum li{
-    height: 20px;
+#lineNum span {
+    display: block;
+    height: 20px;;
 }
-#lineNum li:first-child{
-    margin-top:0;
+.error{
+    background-color: #f00;
+    border-radius: 50%;
 }
 #command{
     border: 0;
@@ -75,6 +79,7 @@ form{
     font-weight: 500;
     font-family: "Microsoft YaHei" , "sans-serif";
     line-height: 20px;
+    overflow-x: auto;
 }
 #square{
     width: 38px;
