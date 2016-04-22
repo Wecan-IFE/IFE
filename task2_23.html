@@ -169,16 +169,14 @@
     <li>MOV TOP：方向转向屏幕上面，向屏幕的上面移动一格</li>
     <li>MOV RIG：方向转向屏幕右侧，向屏幕的右侧移动一格</li>
     <li>MOV BOT：方向转向屏幕下面，向屏幕的下面移动一格</li>
+    <li>以上命令均可带参数，eg:GO 2为前进两格</li>
 </ul>
 <form>
     <button type="button" id="execute">执行</button>
     <button type="button" id="refresh">refresh</button>
     
     <div id="cmd">
-        <ol id="lineNum">
-            <li></li>
-        
-        </ol> 
+        <div id="lineNum"></div> 
         <label for="command"></label><textarea id="command" placeholder="请输入按钮中的命令" rows="10" cols="30"></textarea>
     </div>
    
